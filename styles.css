@@ -150,42 +150,37 @@ header {
   60% { transform: translateY(-5px); }
 }
 
-/* Integration Logos - Professional Scrolling */
+/* Integration Logos - Fixed Aspect Ratios */
 .integration-logos {
   overflow: hidden;
   margin-top: 2rem;
-  padding: 2rem 0;
-  background: #f7fafc;
-  border-radius: 8px;
 }
 
 .logo-track {
   display: flex;
-  gap: 3rem;
-  animation: scroll 40s linear infinite;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
   align-items: center;
-  width: fit-content;
 }
 
-.logo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 120px;
-  height: 48px;
-  opacity: 0.8;
+.logo-track img {
+  height: 36px;
+  width: auto;
+  max-width: 60px;
+  object-fit: contain;
+  opacity: 0.6;
+  filter: grayscale(100%);
   transition: all 0.3s ease;
-  flex-shrink: 0;
 }
 
-.logo-item:hover {
+.logo-track img:hover {
   opacity: 1;
-  transform: translateY(-2px);
+  filter: grayscale(0%);
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 
