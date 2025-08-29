@@ -528,3 +528,14 @@ footer p {
     padding: 2rem 1.5rem;
   }
 }
+
+/* Mobile responsive for client experience section */
+@media (max-width: 768px) {
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    display: block !important;
+  }
+  
+  div[style*="grid-template-columns: 1fr 1fr"] > div {
+    margin-bottom: 2rem !important;
+  }
+}
