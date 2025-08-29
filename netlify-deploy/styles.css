@@ -150,6 +150,44 @@ header {
   60% { transform: translateY(-5px); }
 }
 
+/* Integration Logos - Professional Scrolling */
+.integration-logos {
+  overflow: hidden;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.logo-track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll 40s linear infinite;
+  align-items: center;
+  width: fit-content;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 48px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logo-item:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 
 /* Content Sections - Clean Layout */
 .content-section {
