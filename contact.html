@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Entelech | Growth Systems Engineering</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/LOGO.png" alt="Entelech Logo" />
+      <span>Entelech</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#approach">Our Approach</a></li>
+        <li><a href="index.html#outcomes">Outcomes</a></li>
+        <li><a href="index.html#engagement">Investment</a></li>
+        <li><a href="index.html#contact">Free Audit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="padding: 4rem 2rem;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Get in Touch</h1>
+    <p style="font-size: 1.3rem; color: #4a5568; max-width: 700px; margin: 0 auto 3rem; line-height: 1.7;">
+      Have questions about our growth systems? Want to discuss your specific operational challenges? We're here to help.
+    </p>
+  </section>
+
+  <section class="content-section" style="padding: 3rem 2rem;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+        
+        <!-- Contact Form -->
+        <div>
+          <h2 style="color: #2d3748; margin-bottom: 2rem; font-size: 1.75rem;">Send us a message</h2>
+          
+          <form name="general-contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">Name *</label>
+              <input type="text" name="name" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box;" placeholder="Your Name">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">Email *</label>
+              <input type="email" name="email" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box;" placeholder="your@email.com">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">Company</label>
+              <input type="text" name="company" style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box;" placeholder="Your Company">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">Subject</label>
+              <select name="subject" style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box; background: white;">
+                <option value="">Select a topic...</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Growth Operations Questions">Growth Operations Questions</option>
+                <option value="Partnership Discussion">Partnership Discussion</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">Message *</label>
+              <textarea name="message" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box; min-height: 120px; resize: vertical;" placeholder="Tell us about your operational challenges or ask any questions..."></textarea>
+            </div>
+
+            <div data-netlify-recaptcha="true" style="margin-bottom: 1.5rem;"></div>
+
+            <button type="submit" style="background-color: #2d3748; color: #ffffff; padding: 1rem 2rem; border-radius: 6px; border: none; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background-color 0.2s ease; width: 100%;">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h2 style="color: #2d3748; margin-bottom: 2rem; font-size: 1.75rem;">Contact Information</h2>
+          
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: #2d3748; margin-bottom: 1rem; font-size: 1.25rem;">Direct Contact</h3>
+            <p style="color: #4a5568; line-height: 1.7; margin-bottom: 1rem;">
+              <strong>Phone:</strong> (804) 972-4550<br>
+              <strong>Email:</strong> sperry@entelech.net
+            </p>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: #2d3748; margin-bottom: 1rem; font-size: 1.25rem;">Location</h3>
+            <p style="color: #4a5568; line-height: 1.7;">
+              Richmond, Virginia<br>
+              Serving service businesses nationwide
+            </p>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: #2d3748; margin-bottom: 1rem; font-size: 1.25rem;">Response Time</h3>
+            <p style="color: #4a5568; line-height: 1.7;">
+              We typically respond to all inquiries within 24 hours during business days.
+            </p>
+          </div>
+
+          <div style="background: #f7fafc; padding: 2rem; border-radius: 8px; border-left: 4px solid #2d3748;">
+            <h3 style="color: #2d3748; margin-bottom: 1rem; font-size: 1.25rem;">Need an operational audit?</h3>
+            <p style="color: #4a5568; line-height: 1.7; margin-bottom: 1rem;">
+              If you're interested in our free operational audit, use our specialized discovery form on the main page.
+            </p>
+            <a href="index.html#contact" style="background-color: #2d3748; color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block;">
+              Get Free Audit →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Entelech | Systematic Operations for Strategic Growth</p>
+  </footer>
+
+</body>
+
+</html>

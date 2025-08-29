@@ -577,3 +577,15 @@ input:focus, textarea:focus, select:focus {
   outline: none !important;
   box-shadow: 0 0 0 3px rgba(45, 55, 72, 0.1) !important;
 }
+
+/* Contact page responsive design */
+@media (max-width: 768px) {
+  div[style*="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem"] {
+    display: block !important;
+    gap: 0 !important;
+  }
+  
+  div[style*="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem"] > div:first-child {
+    margin-bottom: 3rem;
+  }
+}
