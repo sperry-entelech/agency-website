@@ -578,6 +578,30 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 0 3px rgba(45, 55, 72, 0.1) !important;
 }
 
+/* Super attractive Free Audit button */
+a[href="#contact"][style*="linear-gradient"] {
+  animation: pulse-shadow 2s infinite;
+}
+
+a[href="#contact"][style*="linear-gradient"]:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 15px 40px rgba(26, 32, 44, 0.4) !important;
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%) !important;
+}
+
+a[href="#contact"][style*="linear-gradient"]:active {
+  transform: translateY(-1px) scale(1.02) !important;
+}
+
+@keyframes pulse-shadow {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(26, 32, 44, 0.3), 0 0 0 0 rgba(26, 32, 44, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(26, 32, 44, 0.3), 0 0 0 10px rgba(26, 32, 44, 0.1);
+  }
+}
+
 /* Contact page responsive design */
 @media (max-width: 768px) {
   div[style*="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem"] {
@@ -587,5 +611,11 @@ input:focus, textarea:focus, select:focus {
   
   div[style*="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem"] > div:first-child {
     margin-bottom: 3rem;
+  }
+  
+  /* Mobile responsive for super attractive button */
+  a[href="#contact"][style*="linear-gradient"] {
+    font-size: 1.2rem !important;
+    padding: 1rem 2rem !important;
   }
 }
