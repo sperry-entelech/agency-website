@@ -351,7 +351,7 @@ header {
 }
 
 .maintenance {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #718096;
   margin-bottom: 1.5rem;
 }
@@ -368,9 +368,9 @@ header {
 
 .maintenance-features p {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #4a5568;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 .checkmark {
@@ -388,7 +388,7 @@ header {
 }
 
 .plan-box > ul li {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #4a5568;
   margin-bottom: 0.5rem;
 }
@@ -435,7 +435,7 @@ footer {
 
 footer p {
   color: #718096;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin: 0;
 }
 
