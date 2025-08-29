@@ -150,36 +150,6 @@ header {
   60% { transform: translateY(-5px); }
 }
 
-/* Integration Logos - Subtle */
-.integration-logos {
-  overflow: hidden;
-  margin-top: 2rem;
-}
-
-.logo-track {
-  display: flex;
-  gap: 2rem;
-  animation: scroll 30s linear infinite;
-  align-items: center;
-}
-
-.logo-track img {
-  width: 36px;
-  height: 36px;
-  opacity: 0.6;
-  filter: grayscale(100%);
-  transition: all 0.3s ease;
-}
-
-.logo-track img:hover {
-  opacity: 1;
-  filter: grayscale(0%);
-}
-
-@keyframes scroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
 
 /* Content Sections - Clean Layout */
 .content-section {
