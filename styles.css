@@ -529,6 +529,15 @@ footer p {
   }
 }
 
+/* Additional button styles */
+a[href="#contact"][style*="background-color: #1a202c"]:hover {
+  background-color: #2d3748 !important;
+}
+
+a[href="mailto:sperry@entelech.net"]:hover {
+  background-color: #f7fafc !important;
+}
+
 /* Mobile responsive for client experience section */
 @media (max-width: 768px) {
   div[style*="grid-template-columns: 1fr 1fr"] {
@@ -537,5 +546,17 @@ footer p {
   
   div[style*="grid-template-columns: 1fr 1fr"] > div {
     margin-bottom: 2rem !important;
+  }
+  
+  /* Mobile responsive for work with us buttons */
+  div[style*="display: flex; gap: 1rem; justify-content: center"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+  
+  div[style*="display: flex; gap: 1rem; justify-content: center"] a {
+    width: 100% !important;
+    max-width: 280px !important;
   }
 }
