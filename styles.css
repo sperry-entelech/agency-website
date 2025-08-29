@@ -559,4 +559,21 @@ a[href="mailto:sperry@entelech.net"]:hover {
     width: 100% !important;
     max-width: 280px !important;
   }
+  
+  /* Mobile form styling */
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Form styling */
+button[type="submit"]:hover {
+  background-color: #1a202c !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #2d3748 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(45, 55, 72, 0.1) !important;
 }

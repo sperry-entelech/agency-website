@@ -269,11 +269,55 @@
           </p>
         </div>
         
-        <div style="text-align: center;">
-          <a href="https://forms.gle/your-form-id" target="_blank" style="background-color: #2d3748; color: #ffffff; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; transition: background-color 0.2s ease;">
-            Start Your Free Audit →
-          </a>
-        </div>
+        <form name="audit-discovery" method="POST" data-netlify="true" data-netlify-recaptcha="true" style="max-width: 600px; margin: 2rem auto 0;">
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">Name & Email *</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <input type="text" name="name" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box;" placeholder="Your Name">
+              <input type="email" name="email" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box;" placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">1. What type of service business are you in, and what's your approximate annual revenue? *</label>
+            <input type="text" name="business_type_revenue" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box;" placeholder="Example: HVAC company, $800K annually">
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">2. What's the biggest operational challenge that's limiting your growth right now? *</label>
+            <textarea name="biggest_challenge" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box; min-height: 100px; resize: vertical;" placeholder="Be specific - this helps us focus the audit on your biggest pain point"></textarea>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">3. Walk me through what happens when a new customer inquiry comes in - from first contact to getting paid. *</label>
+            <textarea name="customer_workflow" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box; min-height: 120px; resize: vertical;" placeholder="Describe your current process step-by-step"></textarea>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">4. What business tasks do you personally handle that eat up the most time each week? *</label>
+            <textarea name="time_consuming_tasks" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box; min-height: 100px; resize: vertical;" placeholder="Think about repetitive tasks that could potentially be automated"></textarea>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; color: #2d3748; font-weight: 600; margin-bottom: 0.5rem;">5. If we found $20,000+ in annual savings, what would make sense to invest to capture that benefit? *</label>
+            <select name="investment_level" required style="padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 1rem; width: 100%; box-sizing: border-box; background: white;">
+              <option value="">Select investment range...</option>
+              <option value="Under $2,500">Under $2,500</option>
+              <option value="$2,500 - $7,500">$2,500 - $7,500</option>
+              <option value="$7,500 - $15,000">$7,500 - $15,000</option>
+              <option value="$15,000+">$15,000+</option>
+              <option value="Need to see specifics first">Need to see specifics first</option>
+            </select>
+          </div>
+
+          <div data-netlify-recaptcha="true" style="margin-bottom: 1.5rem;"></div>
+
+          <div style="text-align: center;">
+            <button type="submit" style="background-color: #2d3748; color: #ffffff; padding: 1rem 2rem; border-radius: 6px; border: none; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: background-color 0.2s ease;">
+              Submit for Free Audit →
+            </button>
+          </div>
+        </form>
       </div>
     </div>
     
