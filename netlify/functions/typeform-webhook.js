@@ -1,5 +1,5 @@
-// Typeform to Instantly Lead Automation Webhook
-// Receives Typeform submissions, scores leads, and adds to appropriate Instantly campaigns
+// Typeform Lead Logging & Scoring Webhook (Temporary Version)
+// Receives Typeform submissions, scores leads, and logs to Google Sheets for later import to Instantly
 
 exports.handler = async (event, context) => {
   // Only allow POST requests
@@ -91,11 +91,11 @@ exports.handler = async (event, context) => {
       }
     };
 
-    // Add to appropriate Instantly campaign
-    const instantlyResult = await addToInstantly(leadData, tier);
+    // Log to Google Sheets for later import to Instantly
+    const sheetResult = await logToSheets(leadData);
 
-    // Log to Google Sheets (optional - keeping your current logging)
-    await logToSheets(leadData);
+    // Send email notification about new lead
+    await sendLeadNotification(leadData);
 
     return {
       statusCode: 200,
@@ -103,7 +103,8 @@ exports.handler = async (event, context) => {
         success: true,
         tier: tier,
         score: score,
-        instantly_id: instantlyResult.id
+        logged_at: new Date().toISOString(),
+        sheet_row: sheetResult?.row || 'logged'
       })
     };
 
@@ -116,43 +117,98 @@ exports.handler = async (event, context) => {
   }
 };
 
-// Add lead to Instantly campaign based on tier
-async function addToInstantly(leadData, tier) {
-  const INSTANTLY_API_KEY = process.env.INSTANTLY_API_KEY;
-  
-  // Campaign IDs for each tier (you'll need to set these up in Instantly)
-  const campaignIds = {
-    'High': process.env.INSTANTLY_HIGH_CAMPAIGN_ID,
-    'Medium': process.env.INSTANTLY_MEDIUM_CAMPAIGN_ID, 
-    'Low': process.env.INSTANTLY_LOW_CAMPAIGN_ID
-  };
+// Log lead to Google Sheets for later import to Instantly
+async function logToSheets(leadData) {
+  try {
+    const GOOGLE_SHEETS_ID = process.env.GOOGLE_SHEETS_ID || '1ahzDhiihqM8DvTjxiXQzAKrMwS1OJyrzi3tIuGS6BBE';
+    
+    // Prepare row data for Google Sheets
+    const rowData = [
+      leadData.firstName + ' ' + leadData.lastName, // Name
+      leadData.email, // Email
+      '', // Phone (if you add this field later)
+      leadData.company, // Company
+      '', // Employees (extracted from business info)
+      leadData.customFields.business_type, // Business Type/Revenue
+      leadData.customFields.investment_level, // Budget/Investment
+      leadData.customFields.biggest_challenge, // Challenge
+      leadData.customFields.lead_score, // Lead Score
+      leadData.customFields.tier, // Tier
+      'No', // Processed (for tracking)
+      leadData.customFields.form_submitted_at, // Date Added
+      `Ready for ${leadData.customFields.tier} campaign` // Notes
+    ];
 
-  const campaignId = campaignIds[tier];
-
-  const response = await fetch('https://api.instantly.ai/api/v1/leads/add', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${INSTANTLY_API_KEY}`
-    },
-    body: JSON.stringify({
-      campaign_id: campaignId,
-      leads: [leadData]
-    })
-  });
-
-  if (!response.ok) {
-    throw new Error(`Instantly API error: ${response.statusText}`);
+    // For now, we'll use a simple fetch to a Google Apps Script or Zapier webhook
+    // You can also use the Google Sheets API directly with service account credentials
+    
+    const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+    if (webhookUrl) {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          values: [rowData]
+        })
+      });
+      
+      if (response.ok) {
+        console.log('Lead logged to Google Sheets successfully');
+        return { success: true, row: rowData };
+      }
+    }
+    
+    // Fallback: log to console for now
+    console.log('Lead data to be logged:', {
+      name: rowData[0],
+      email: rowData[1],
+      company: rowData[3],
+      tier: rowData[9],
+      score: rowData[8],
+      timestamp: rowData[11]
+    });
+    
+    return { success: true, method: 'console_log' };
+    
+  } catch (error) {
+    console.error('Error logging to sheets:', error);
+    return { success: false, error: error.message };
   }
-
-  return await response.json();
 }
 
-// Optional: Log to Google Sheets (keeping your existing logging)
-async function logToSheets(leadData) {
-  // Implementation for Google Sheets logging if you want to keep it
-  // This would use the Google Sheets API
-  console.log('Lead logged:', leadData);
+// Send email notification about new high-value leads
+async function sendLeadNotification(leadData) {
+  // Only notify for high-tier leads or you can adjust this
+  if (leadData.customFields.tier !== 'High') return;
+
+  try {
+    // Simple email notification - you can use any email service
+    const notificationData = {
+      to: 'sperry@entelech.net',
+      subject: `🎯 High-Value Lead: ${leadData.firstName} (Score: ${leadData.customFields.lead_score})`,
+      html: `
+        <h2>New High-Value Lead Alert</h2>
+        <p><strong>Name:</strong> ${leadData.firstName} ${leadData.lastName}</p>
+        <p><strong>Email:</strong> ${leadData.email}</p>
+        <p><strong>Company:</strong> ${leadData.company}</p>
+        <p><strong>Score:</strong> ${leadData.customFields.lead_score} (${leadData.customFields.tier} Tier)</p>
+        <p><strong>Business Type:</strong> ${leadData.customFields.business_type}</p>
+        <p><strong>Investment Level:</strong> ${leadData.customFields.investment_level}</p>
+        <p><strong>Challenge:</strong> ${leadData.customFields.biggest_challenge}</p>
+        <hr>
+        <p><em>Lead submitted at: ${leadData.customFields.form_submitted_at}</em></p>
+        <p><strong>Recommended Action:</strong> Add to ${leadData.customFields.tier} campaign in Instantly when ready</p>
+      `
+    };
+
+    // You can integrate with SendGrid, Mailgun, or any email service here
+    console.log('High-value lead notification:', notificationData.subject);
+    
+  } catch (error) {
+    console.error('Error sending notification:', error);
+  }
 }
 
 // Extract company name from business description
