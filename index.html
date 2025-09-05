@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entelech - Growth Systems Engineering for Service Businesses</title>
+  <meta name="description" content="Growth operations & systems provider that partners with service businesses to build infrastructure for predictable growth. Custom automation and business process systems." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #2c3e50 100%);
+      color: white;
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Subtle texture overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(64, 64, 64, 0.1) 50%, transparent 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Logo Section */
+    .logo-section {
+      text-align: center;
+      padding: 48px 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #0099cc, #00d4ff);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+
+    .logo-text {
+      font-size: 32px;
+      font-weight: 700;
+      color: #33ddff;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 64px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(0, 153, 204, 0.2), rgba(0, 212, 255, 0.2));
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 50px;
+      padding: 8px 24px;
+      margin-bottom: 24px;
+    }
+
+    .badge-text {
+      color: #33ddff;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .attention-line {
+      font-size: 32px;
+      font-weight: 700;
+      color: #d1d5db;
+      margin-bottom: 8px;
+    }
+
+    .main-headline {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    .highlight-text {
+      color: #33ddff;
+      text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    }
+
+    .sub-headline {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .sub-text {
+      font-size: 24px;
+      color: #d1d5db;
+      font-weight: 500;
+      margin-bottom: 48px;
+    }
+
+    /* CTA Button */
+    .cta-container {
+      position: relative;
+      display: inline-block;
+      margin: 48px 0;
+    }
+
+    .cta-glow {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0099cc, #00d4ff);
+      border-radius: 12px;
+      filter: blur(16px);
+      opacity: 0.75;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.75; }
+      50% { opacity: 1; }
+    }
+
+    .cta-button {
+      position: relative;
+      background: linear-gradient(135deg, #0099cc, #00d4ff);
+      color: white;
+      border: 2px solid rgba(51, 221, 255, 0.5);
+      padding: 24px 48px;
+      border-radius: 12px;
+      font-size: 24px;
+      font-weight: 900;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(135deg, #006699, #0099cc);
+      border-color: #33ddff;
+      transform: scale(1.05);
+    }
+
+    .cta-text {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .urgency-text {
+      color: #33ddff;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .no-pressure {
+      color: #9ca3af;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    /* Problem Section */
+    .problem-section {
+      background: rgba(45, 45, 45, 0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 48px;
+      margin: 64px 0;
+      border: 1px solid rgba(64, 64, 64, 0.5);
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 20px;
+      color: #33ddff;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .problem-card {
+      background: rgba(26, 26, 26, 0.5);
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid rgba(64, 64, 64, 0.3);
+      text-align: center;
+    }
+
+    .problem-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .problem-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .problem-description {
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      margin: 64px 0;
+    }
+
+    .benefits-list {
+      space-y: 24px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      background: rgba(45, 45, 45, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 32px;
+      border: 1px solid rgba(64, 64, 64, 0.5);
+      margin-bottom: 24px;
+    }
+
+    .benefit-number {
+      background: linear-gradient(135deg, #0099cc, #00d4ff);
+      color: white;
+      font-weight: 900;
+      font-size: 20px;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 24px;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+
+    .benefit-content h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .benefit-content p {
+      color: #d1d5db;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* About Section */
+    .about-section {
+      background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(44, 62, 80, 0.5));
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 48px;
+      margin: 64px 0;
+      border: 1px solid rgba(64, 64, 64, 0.5);
+      text-align: center;
+    }
+
+    .about-text {
+      font-size: 20px;
+      color: #d1d5db;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Final CTA Section */
+    .final-cta {
+      text-align: center;
+      padding: 64px 0;
+    }
+
+    .final-cta h3 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .final-cta-subtitle {
+      font-size: 20px;
+      color: #33ddff;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .final-cta-note {
+      color: #9ca3af;
+      margin-bottom: 32px;
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(26, 26, 26, 0.8);
+      backdrop-filter: blur(10px);
+      color: #9ca3af;
+      text-align: center;
+      padding: 24px 0;
+      font-size: 14px;
+      border-top: 1px solid rgba(64, 64, 64, 0.3);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-headline {
+        font-size: 40px;
+      }
+
+      .attention-line {
+        font-size: 24px;
+      }
+
+      .sub-headline {
+        font-size: 24px;
+      }
+
+      .sub-text {
+        font-size: 18px;
+      }
+
+      .cta-button {
+        font-size: 18px;
+        padding: 20px 32px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .problem-section,
+      .about-section {
+        padding: 32px 24px;
+      }
+
+      .benefit-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .benefit-number {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* Mobile responsiveness for new sections */
+      div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+      
+      .problem-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .main-headline {
+        font-size: 32px;
+      }
+
+      .cta-button {
+        font-size: 16px;
+        padding: 16px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Centered Logo -->
+  <div class="container">
+    <div class="logo-section">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+          </svg>
+        </div>
+        <span class="logo-text">Entelech</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="main-headline">
+        <span class="highlight-text">Growth Systems Engineering</span><br>
+        for Service Businesses
+      </h1>
+      
+      <p class="sub-text">
+        Service businesses today struggle with the same problems that limit growth. Your team spends hours on tasks that should happen automatically. Customer communication gets forgotten in the daily rush. Important sales leads slip away while you're focused on current clients.
+      </p>
+      
+      <p class="sub-text">
+        Entelech is a growth operations & systems provider that partners with service businesses to build the infrastructure that drives predictable growth. We handle everything from foundational growth infrastructure to business process automation, and creating the tracking systems that let you scale without chaos.
+      </p>
+      
+      <p class="sub-text">
+        Our systems typically save businesses 3-4x more than they cost while helping you handle significantly more volume without the quality drop you'd expect. It's simple math: if our system saves you $30,000 in time and missed opportunities, why wouldn't you invest a fraction of that to capture the full benefit?
+      </p>
+      
+      <!-- Enhanced CTA Button -->
+      <div class="cta-container">
+        <div class="cta-glow"></div>
+        <a href="https://calendly.com/joinentelech" target="_blank" rel="noopener noreferrer" class="cta-button">
+          <span style="margin-right: 12px;">📞</span>
+          BOOK STRATEGY CALL
+          <svg style="margin-left: 12px;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12,5 19,12 12,19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="problem-section">
+      <h2 class="section-title">How Our Growth Infrastructure Works</h2>
+      <p class="section-subtitle">With service businesses drowning in manual processes and reactive operations, building systematic growth is harder than ever before.</p>
+      
+      <div class="about-text" style="text-align: left; margin: 32px 0;">
+        <p>When you rely on memory, spreadsheets, and manual coordination—which 90% of service businesses do—you're fighting an uphill battle against competitors with better systems.</p>
+        <br>
+        <p>You need infrastructure that runs your operations automatically, otherwise your growth will plateau and your team will burn out trying to keep up.</p>
+        <br>
+        <p>Plus, there's no support for systematic growth from generic business software, because it's built for theoretical companies, not your specific business model.</p>
+        <br>
+        <p><strong>We are on your side.</strong> With our custom growth infrastructure, you'll get dedicated support, proactive optimization, and systematic processes that ensure your operations scale smoothly without sacrificing quality.</p>
+        <br>
+        <p>Plus, our approach is tailored specifically to service businesses—you won't get cookie-cutter solutions like you will from generic automation providers. Our systems are designed, built, and optimized for maximum operational efficiency and growth acceleration.</p>
+        <br>
+        <p>If you're not a systems person, let us put it in simple terms: Generic software is like trying to fit your business into someone else's box—our custom infrastructure is like having operational excellence built specifically around how your business actually works.</p>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="benefits-section">
+      <h2 class="section-title">How Fast We Deploy Your Systems</h2>
+      <p class="section-subtitle">A step-by-step timeline to get you from chaos to systematic operations in just weeks.</p>
+      
+      <div style="text-align: center; margin: 32px 0;">
+        <div class="cta-container" style="margin: 24px 0;">
+          <a href="https://calendly.com/joinentelech" target="_blank" rel="noopener noreferrer" class="cta-button" style="font-size: 18px; padding: 16px 32px;">
+            BOOK STRATEGY CALL
+          </a>
+        </div>
+      </div>
+      
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-number">01</div>
+          <div class="benefit-content">
+            <h3>Week 1: Discovery & System Design</h3>
+            <p>Complete operational audit and workflow mapping • Custom system architecture and integration planning • Growth infrastructure blueprint approval</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-number">02</div>
+          <div class="benefit-content">
+            <h3>Week 2: Core System Development</h3>
+            <p>Customer communication workflow automation • Lead management and nurturing system setup • Business process automation deployment</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-number">03</div>
+          <div class="benefit-content">
+            <h3>Week 3: Testing & Team Training</h3>
+            <p>System testing with real business scenarios • Team training on new operational workflows • Performance monitoring and optimization setup</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-number">04</div>
+          <div class="benefit-content">
+            <h3>Ongoing: Optimization & Scaling</h3>
+            <p>Continuous performance analysis and improvement • Strategic guidance for operational scaling • System evolution as your business grows</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Division of Work Section -->
+    <section class="about-section">
+      <h2 class="section-title">What You Handle vs What We Handle</h2>
+      <p class="section-subtitle">A clear split so your team stays focused on service delivery while we handle the operational backbone.</p>
+      
+      <div style="text-align: center; margin: 32px 0;">
+        <div class="cta-container" style="margin: 24px 0;">
+          <a href="https://calendly.com/joinentelech" target="_blank" rel="noopener noreferrer" class="cta-button" style="font-size: 18px; padding: 16px 32px;">
+            BOOK STRATEGY CALL
+          </a>
+        </div>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px;">
+        <div>
+          <h3 style="color: #33ddff; font-size: 24px; margin-bottom: 24px;">You Focus On:</h3>
+          <div class="about-text" style="text-align: left;">
+            <p><strong>Revenue Generation</strong> - Closing deals and serving high-value clients</p>
+            <p><strong>Strategic Growth</strong> - Market expansion and competitive positioning</p>
+            <p><strong>Team Leadership</strong> - Managing talent and building company culture</p>
+            <p><strong>Client Relationships</strong> - Maintaining partnerships that drive referrals</p>
+          </div>
+        </div>
+        <div>
+          <h3 style="color: #33ddff; font-size: 24px; margin-bottom: 24px;">We Handle:</h3>
+          <div class="about-text" style="text-align: left;">
+            <p><strong>Revenue Operations</strong> - Systems that generate and capture more money</p>
+            <p><strong>Process Automation</strong> - Eliminating $4,000+ monthly in operational waste</p>
+            <p><strong>Performance Optimization</strong> - Making every process more profitable</p>
+            <p><strong>Growth Infrastructure</strong> - Building systems that scale revenue without scaling costs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="problem-section">
+      <h2 class="section-title">Choose Your Growth Infrastructure Package</h2>
+      
+      <div class="problem-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; margin-top: 48px;">
+        <div class="problem-card" style="padding: 40px; text-align: left;">
+          <h3 class="problem-title" style="color: #33ddff; font-size: 28px; margin-bottom: 16px;">Foundation System - $2,500</h3>
+          <p style="color: #d1d5db; font-size: 16px; margin-bottom: 24px;"><strong>Perfect for small teams ready to systematize core operations</strong></p>
+          
+          <div style="margin-bottom: 24px;">
+            <p style="color: #33ddff; font-weight: 600; margin-bottom: 8px;">Setup Investment: $2,500 one-time implementation</p>
+            <p style="color: #d1d5db; font-weight: 600; margin-bottom: 16px;">What's Included:</p>
+            <ul style="color: #d1d5db; line-height: 1.8; margin-left: 20px;">
+              <li>Customer communication workflow automation</li>
+              <li>Basic lead nurturing and follow-up systems</li>
+              <li>Essential business process optimization</li>
+              <li>Performance tracking and reporting setup</li>
+              <li>30 days of optimization support</li>
+            </ul>
+            <p style="color: #33ddff; font-weight: 600; margin-top: 16px;">Timeline: 2-3 weeks to full deployment</p>
+          </div>
+        </div>
+        
+        <div class="problem-card" style="padding: 40px; text-align: left; border: 2px solid #33ddff; position: relative;">
+          <div style="position: absolute; top: -12px; right: 24px; background: #33ddff; color: #1a1a1a; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 12px;">MOST POPULAR</div>
+          <h3 class="problem-title" style="color: #33ddff; font-size: 28px; margin-bottom: 16px;">Professional System - $7,500</h3>
+          <p style="color: #d1d5db; font-size: 16px; margin-bottom: 24px;"><strong>Most popular for growing service businesses</strong></p>
+          
+          <div style="margin-bottom: 24px;">
+            <p style="color: #33ddff; font-weight: 600; margin-bottom: 8px;">Setup Investment: $7,500 one-time implementation</p>
+            <p style="color: #d1d5db; font-weight: 600; margin-bottom: 16px;">What's Included:</p>
+            <ul style="color: #d1d5db; line-height: 1.8; margin-left: 20px;">
+              <li>Complete customer journey automation</li>
+              <li>Advanced lead generation and sales operations</li>
+              <li>Internal workflow coordination systems</li>
+              <li>Business intelligence and strategic reporting</li>
+              <li>Team training and systematic implementation</li>
+              <li>90 days of optimization support</li>
+            </ul>
+            <p style="color: #33ddff; font-weight: 600; margin-top: 16px;">Timeline: 3-4 weeks to full deployment</p>
+          </div>
+        </div>
+        
+        <div class="problem-card" style="padding: 40px; text-align: left;">
+          <h3 class="problem-title" style="color: #33ddff; font-size: 28px; margin-bottom: 16px;">Enterprise System - $15,000</h3>
+          <p style="color: #d1d5db; font-size: 16px; margin-bottom: 24px;"><strong>Complete operational transformation for established businesses</strong></p>
+          
+          <div style="margin-bottom: 24px;">
+            <p style="color: #33ddff; font-weight: 600; margin-bottom: 8px;">Setup Investment: $15,000 one-time implementation</p>
+            <p style="color: #d1d5db; font-weight: 600; margin-bottom: 16px;">What's Included:</p>
+            <ul style="color: #d1d5db; line-height: 1.8; margin-left: 20px;">
+              <li>Multi-location or complex workflow support</li>
+              <li>Advanced integration and custom development</li>
+              <li>Comprehensive performance optimization</li>
+              <li>Priority support and dedicated management</li>
+              <li>Strategic partnership and scaling guidance</li>
+              <li>Full year of systematic optimization</li>
+            </ul>
+            <p style="color: #33ddff; font-weight: 600; margin-top: 16px;">Timeline: 4-6 weeks to full deployment</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin: 48px 0;">
+        <div class="cta-container" style="margin: 24px;">
+          <a href="https://calendly.com/joinentelech" target="_blank" rel="noopener noreferrer" class="cta-button">
+            START WITH PROFESSIONAL SYSTEM
+          </a>
+        </div>
+        <div class="cta-container">
+          <a href="https://calendly.com/joinentelech" target="_blank" rel="noopener noreferrer" class="cta-button" style="background: rgba(0, 153, 204, 0.2); border: 2px solid rgba(51, 221, 255, 0.5);">
+            BOOK STRATEGY CALL
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="benefits-section">
+      <h2 class="section-title">How Service Businesses Are Scaling Systematically</h2>
+      <p class="section-subtitle">Owners and teams are turning operational chaos into predictable growth faster than ever.</p>
+      
+      <div class="problem-grid" style="margin-top: 48px;">
+        <div class="problem-card" style="padding: 32px; text-align: left;">
+          <p class="problem-description" style="font-style: italic; margin-bottom: 20px; font-size: 18px;">"We went from manually coordinating everything to having systems that run themselves. Our team focuses on customers while the backend handles itself."</p>
+          <p style="color: #33ddff; font-weight: 600;">- Regional Service Company</p>
+        </div>
+        
+        <div class="problem-card" style="padding: 32px; text-align: left;">
+          <p class="problem-description" style="font-style: italic; margin-bottom: 20px; font-size: 18px;">"The tracking systems alone saved us 15 hours per week. We can see exactly what's working and what needs attention."</p>
+          <p style="color: #33ddff; font-weight: 600;">- Professional Services Firm</p>
+        </div>
+        
+        <div class="problem-card" style="padding: 32px; text-align: left;">
+          <p class="problem-description" style="font-style: italic; margin-bottom: 20px; font-size: 18px;">"Setup was exactly what they promised. Three weeks later we had professional operations that scale without constant management."</p>
+          <p style="color: #33ddff; font-weight: 600;">- Growing Contractor</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="problem-section">
+      <h2 class="section-title">Have Questions? We Have Answers</h2>
+      
+      <div class="benefits-list" style="margin-top: 48px;">
+        <div class="benefit-item">
+          <div class="benefit-content">
+            <h3 style="color: #33ddff;">Q: How is this different from other automation providers?</h3>
+            <p>A: We build custom systems around your specific business model instead of forcing you to adapt to generic software.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-content">
+            <h3 style="color: #33ddff;">Q: What if our business model is unique?</h3>
+            <p>A: That's exactly what we specialize in. Every service business has unique workflows—we design systems that work with your reality.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-content">
+            <h3 style="color: #33ddff;">Q: How long before we see results?</h3>
+            <p>A: Most businesses see operational improvements within 2 weeks of deployment, with full systematic benefits by month 2.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-content">
+            <h3 style="color: #33ddff;">Q: What ongoing support do we get?</h3>
+            <p>A: All packages include optimization support, and we provide strategic guidance for scaling your operations as you grow.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin: 48px 0;">
+        <p style="color: #d1d5db; font-size: 18px; margin-bottom: 24px;">Still have questions? <strong><a href="https://calendly.com/joinentelech" style="color: #33ddff; text-decoration: none;">Book a strategy call</a></strong> to discuss your specific situation. Average response time is under 24 hours.</p>
+      </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+      <h3>Ready to Build Your Growth Infrastructure?</h3>
+      
+      <div class="cta-container">
+        <div class="cta-glow"></div>
+        <a href="https://calendly.com/joinentelech" target="_blank" rel="noopener noreferrer" class="cta-button">
+          <span style="margin-right: 12px;">📞</span>
+          BOOK STRATEGY CALL
+          <svg style="margin-left: 12px;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12,5 19,12 12,19"></polyline>
+          </svg>
+        </a>
+      </div>
+      
+      <div style="text-align: center; margin-top: 32px;">
+        <p style="color: #d1d5db; font-size: 18px; margin: 8px 0;"><strong>Direct line:</strong> (804) 972-4550</p>
+        <p style="color: #d1d5db; font-size: 18px; margin: 8px 0;"><strong>Questions:</strong> sperry@entelech.net</p>
+        <p style="color: #9ca3af; font-size: 16px; margin-top: 24px;"><strong>Serving service businesses nationwide</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      © 2025 Entelech. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Simple click tracking for buttons
+    document.querySelectorAll('.cta-button').forEach(button => {
+      button.addEventListener('click', function() {
+        // You can add analytics tracking here
+        console.log('CTA button clicked');
+      });
+    });
+  </script>
+</body>
+</html>
