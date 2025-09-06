@@ -35,9 +35,21 @@
     /* Logo Section */
     .logo-section {
       text-align: center;
-      padding: 64px 0 48px 0;
+      padding: 80px 0 60px 0;
       background: #0a0a0a;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .logo-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     }
 
     .logo {
@@ -48,23 +60,38 @@
     }
 
     .logo-icon {
-      width: 64px;
-      height: 64px;
-      background: rgba(31, 41, 55, 0.8);
-      border-radius: 12px;
+      width: 72px;
+      height: 72px;
+      background: rgba(45, 45, 45, 0.9);
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 24px;
-      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2), 0 2px 8px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin-right: 28px;
+      box-shadow: 0 6px 25px rgba(255, 255, 255, 0.1), 0 3px 12px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .logo-icon:hover {
+      transform: translateY(-2px) rotate(2deg);
+      box-shadow: 0 8px 35px rgba(255, 255, 255, 0.15), 0 4px 16px rgba(0, 0, 0, 0.5);
+      background: rgba(55, 55, 55, 0.95);
     }
 
     .logo-text {
-      font-size: 36px;
-      font-weight: 700;
+      font-size: 48px;
+      font-weight: 800;
       color: #ffffff;
-      letter-spacing: -0.5px;
+      letter-spacing: -1px;
+      transition: all 0.3s ease;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo:hover .logo-text {
+      color: #f8f9fa;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+      transform: translateY(-1px);
     }
 
     /* Hero Section */
@@ -450,24 +477,31 @@
     <div class="logo-section">
       <div class="logo">
         <div class="logo-icon">
-          <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Triquetra-inspired geometric design -->
+          <svg width="56" height="56" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#0099cc;stop-opacity:1" />
+              <linearGradient id="modernGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+                <stop offset="50%" style="stop-color:#f8f9fa;stop-opacity:0.7" />
+                <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:0.5" />
               </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge> 
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/> 
+                </feMerge>
+              </filter>
             </defs>
-            <!-- Interlocking circles forming triquetra -->
-            <circle cx="35" cy="35" r="18" fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8"/>
-            <circle cx="65" cy="35" r="18" fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8"/>
-            <circle cx="50" cy="58" r="18" fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8"/>
-            <!-- Central connecting elements -->
-            <circle cx="50" cy="42" r="6" fill="none" stroke="url(#logoGradient)" stroke-width="1.5" opacity="0.6"/>
-            <!-- Grid lines for tech aesthetic -->
-            <line x1="32" y1="32" x2="68" y2="38" stroke="url(#logoGradient)" stroke-width="0.5" opacity="0.4"/>
-            <line x1="32" y1="38" x2="68" y2="32" stroke="url(#logoGradient)" stroke-width="0.5" opacity="0.4"/>
-            <line x1="47" y1="55" x2="53" y2="25" stroke="url(#logoGradient)" stroke-width="0.5" opacity="0.4"/>
+            <!-- Three interlocking circles only -->
+            <circle cx="40" cy="45" r="22" fill="none" stroke="url(#modernGradient)" stroke-width="3" opacity="0.9" filter="url(#glow)">
+              <animate attributeName="stroke-width" values="3;4;3" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="80" cy="45" r="22" fill="none" stroke="url(#modernGradient)" stroke-width="3" opacity="0.9" filter="url(#glow)">
+              <animate attributeName="stroke-width" values="3;4;3" dur="3s" begin="1s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="60" cy="75" r="22" fill="none" stroke="url(#modernGradient)" stroke-width="3" opacity="0.9" filter="url(#glow)">
+              <animate attributeName="stroke-width" values="3;4;3" dur="3s" begin="2s" repeatCount="indefinite"/>
+            </circle>
           </svg>
         </div>
         <span class="logo-text">Entelech</span>
