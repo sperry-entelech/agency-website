@@ -20,8 +20,8 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: #0a0a0a;
-      color: #ffffff;
+      background: #ffffff;
+      color: #1f2937;
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -35,21 +35,9 @@
     /* Logo Section */
     .logo-section {
       text-align: center;
-      padding: 80px 0 60px 0;
-      background: #0a0a0a;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .logo-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      padding: 64px 0 48px 0;
+      background: #ffffff;
+      border-bottom: 1px solid #f1f5f9;
     }
 
     .logo {
@@ -60,45 +48,43 @@
     }
 
     .logo-icon {
-      width: 72px;
-      height: 72px;
-      background: rgba(45, 45, 45, 0.9);
+      width: 80px;
+      height: 80px;
+      background: #ffffff;
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 28px;
-      box-shadow: 0 6px 25px rgba(255, 255, 255, 0.1), 0 3px 12px rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-right: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      border: 2px solid #f1f5f9;
+      transition: all 0.3s ease;
     }
     
     .logo-icon:hover {
-      transform: translateY(-2px) rotate(2deg);
-      box-shadow: 0 8px 35px rgba(255, 255, 255, 0.15), 0 4px 16px rgba(0, 0, 0, 0.5);
-      background: rgba(55, 55, 55, 0.95);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      border-color: #e2e8f0;
     }
 
     .logo-text {
-      font-size: 48px;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: -1px;
+      font-size: 42px;
+      font-weight: 700;
+      color: #1f2937;
+      letter-spacing: -0.5px;
       transition: all 0.3s ease;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
     
     .logo:hover .logo-text {
-      color: #f8f9fa;
-      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+      color: #111827;
       transform: translateY(-1px);
     }
 
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 80px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 64px 0;
+      border-bottom: 1px solid #e5e7eb;
       margin-bottom: 64px;
     }
 
@@ -125,18 +111,15 @@
     }
 
     .main-headline {
-      font-size: 56px;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 32px;
-      color: #ffffff;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: #111827;
     }
 
     .highlight-text {
-      background: linear-gradient(135deg, #00d4ff, #0099cc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #1f2937;
     }
 
     .sub-headline {
@@ -148,11 +131,11 @@
     }
 
     .sub-text {
-      font-size: 20px;
-      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+      color: #6b7280;
       font-weight: 400;
       margin-bottom: 32px;
-      max-width: 900px;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -164,25 +147,23 @@
     }
 
     .cta-button {
-      background: linear-gradient(135deg, #00d4ff, #0099cc);
-      color: #000000;
-      border: 1px solid transparent;
-      padding: 18px 36px;
-      border-radius: 8px;
-      font-size: 17px;
-      font-weight: 700;
+      background: #1f2937;
+      color: white;
+      border: 1px solid #1f2937;
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       gap: 8px;
-      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
     }
 
     .cta-button:hover {
-      background: linear-gradient(135deg, #0099cc, #006699);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(0, 212, 255, 0.4);
+      background: #374151;
+      border-color: #374151;
     }
 
     .cta-text {
@@ -204,27 +185,27 @@
 
     /* Section */
     .problem-section {
-      background: #0a0a0a;
-      padding: 80px 0;
+      background: #ffffff;
+      padding: 64px 0;
       margin: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid #e5e7eb;
     }
 
     .section-title {
-      font-size: 42px;
-      font-weight: 800;
+      font-size: 36px;
+      font-weight: 700;
       text-align: center;
-      margin-bottom: 24px;
-      color: #ffffff;
+      margin-bottom: 16px;
+      color: #111827;
     }
 
     .section-subtitle {
-      font-size: 20px;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 18px;
+      color: #6b7280;
       font-weight: 400;
       text-align: center;
-      margin-bottom: 64px;
-      max-width: 700px;
+      margin-bottom: 48px;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -236,13 +217,11 @@
     }
 
     .problem-card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 40px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
       text-align: center;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
     .problem-icon {
@@ -251,22 +230,21 @@
     }
 
     .problem-title {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #111827;
     }
 
     .problem-description {
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.7;
+      color: #6b7280;
+      line-height: 1.6;
     }
 
     /* Benefits Section */
     .benefits-section {
-      padding: 80px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      background: #0a0a0a;
+      padding: 64px 0;
+      border-bottom: 1px solid #e5e7eb;
     }
 
     .benefits-list {
@@ -276,71 +254,68 @@
     .benefit-item {
       display: flex;
       align-items: flex-start;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      margin-bottom: 32px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 32px;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 24px;
     }
 
     .benefit-icon {
-      background: rgba(0, 212, 255, 0.1);
-      color: #00d4ff;
-      width: 56px;
-      height: 56px;
-      border-radius: 12px;
+      background: #f3f4f6;
+      color: #1f2937;
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 32px;
+      margin-right: 24px;
       flex-shrink: 0;
-      border: 1px solid rgba(0, 212, 255, 0.2);
-      box-shadow: 0 4px 16px rgba(0, 212, 255, 0.1);
+      border: 1px solid #e5e7eb;
     }
 
     .benefit-content h3 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #111827;
     }
 
     .benefit-content p {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 18px;
-      line-height: 1.7;
+      color: #6b7280;
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     /* About Section */
     .about-section {
-      background: rgba(255, 255, 255, 0.02);
-      padding: 80px 48px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: #f9fafb;
+      padding: 64px 48px;
+      border-bottom: 1px solid #e5e7eb;
       text-align: center;
     }
 
     .about-text {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.7;
-      max-width: 900px;
+      font-size: 16px;
+      color: #6b7280;
+      line-height: 1.6;
+      max-width: 800px;
       margin: 0 auto;
     }
 
     /* Final CTA Section */
     .final-cta {
       text-align: center;
-      padding: 80px 0;
-      background: #0a0a0a;
+      padding: 64px 0;
+      background: #ffffff;
     }
 
     .final-cta h3 {
-      font-size: 40px;
-      font-weight: 800;
-      margin-bottom: 24px;
-      color: #ffffff;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #111827;
     }
 
     .final-cta-subtitle {
@@ -357,11 +332,10 @@
 
     /* FAQ Section */
     .faq-section {
-      background: rgba(255, 255, 255, 0.03);
+      background: #000000;
       color: #ffffff;
       padding: 80px 0;
       margin: 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .faq-title {
@@ -394,12 +368,12 @@
 
     /* Footer */
     .footer {
-      background: #000000;
-      color: rgba(255, 255, 255, 0.6);
+      background: #f9fafb;
+      color: #6b7280;
       text-align: center;
-      padding: 32px 0;
+      padding: 24px 0;
       font-size: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid #e5e7eb;
     }
 
     /* Responsive Design */
@@ -477,31 +451,42 @@
     <div class="logo-section">
       <div class="logo">
         <div class="logo-icon">
-          <svg width="56" height="56" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="64" height="64" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sophisticated triquetra with wireframe spheres -->
             <defs>
-              <linearGradient id="modernGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
-                <stop offset="50%" style="stop-color:#f8f9fa;stop-opacity:0.7" />
-                <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:0.5" />
-              </linearGradient>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                <feMerge> 
-                  <feMergeNode in="coloredBlur"/>
-                  <feMergeNode in="SourceGraphic"/> 
-                </feMerge>
-              </filter>
+              <pattern id="wireframe" patternUnits="userSpaceOnUse" width="8" height="8">
+                <path d="M 8 0 L 0 0 0 8" fill="none" stroke="#666" stroke-width="0.5"/>
+              </pattern>
             </defs>
-            <!-- Three interlocking circles only -->
-            <circle cx="40" cy="45" r="22" fill="none" stroke="url(#modernGradient)" stroke-width="3" opacity="0.9" filter="url(#glow)">
-              <animate attributeName="stroke-width" values="3;4;3" dur="3s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="80" cy="45" r="22" fill="none" stroke="url(#modernGradient)" stroke-width="3" opacity="0.9" filter="url(#glow)">
-              <animate attributeName="stroke-width" values="3;4;3" dur="3s" begin="1s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="60" cy="75" r="22" fill="none" stroke="url(#modernGradient)" stroke-width="3" opacity="0.9" filter="url(#glow)">
-              <animate attributeName="stroke-width" values="3;4;3" dur="3s" begin="2s" repeatCount="indefinite"/>
-            </circle>
+            
+            <!-- Wireframe spheres -->
+            <ellipse cx="75" cy="70" rx="35" ry="25" fill="none" stroke="#333" stroke-width="1" opacity="0.6"/>
+            <ellipse cx="125" cy="70" rx="35" ry="25" fill="none" stroke="#333" stroke-width="1" opacity="0.6"/>
+            <ellipse cx="100" cy="110" rx="35" ry="25" fill="none" stroke="#333" stroke-width="1" opacity="0.6"/>
+            
+            <!-- Grid lines on spheres -->
+            <path d="M 45 70 Q 75 50 105 70 Q 75 90 45 70" fill="none" stroke="#666" stroke-width="0.5" opacity="0.4"/>
+            <path d="M 95 70 Q 125 50 155 70 Q 125 90 95 70" fill="none" stroke="#666" stroke-width="0.5" opacity="0.4"/>
+            <path d="M 70 110 Q 100 90 130 110 Q 100 130 70 110" fill="none" stroke="#666" stroke-width="0.5" opacity="0.4"/>
+            
+            <!-- Main triquetra outline -->
+            <path d="M 75 45 Q 50 70 75 95 Q 100 70 75 45 Z" fill="none" stroke="#000" stroke-width="4"/>
+            <path d="M 125 45 Q 150 70 125 95 Q 100 70 125 45 Z" fill="none" stroke="#000" stroke-width="4"/>
+            <path d="M 100 85 Q 75 110 100 135 Q 125 110 100 85 Z" fill="none" stroke="#000" stroke-width="4"/>
+            
+            <!-- Inner detail -->
+            <path d="M 85 70 Q 100 60 115 70 Q 100 80 85 70" fill="none" stroke="#000" stroke-width="2"/>
+            
+            <!-- Subtle animation -->
+            <g opacity="0.7">
+              <animateTransform attributeName="transform" type="rotate" values="0 100 90;360 100 90" dur="20s" repeatCount="indefinite"/>
+              <circle cx="100" cy="70" r="2" fill="#666">
+                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="100" cy="110" r="2" fill="#666">
+                <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+              </circle>
+            </g>
           </svg>
         </div>
         <span class="logo-text">Entelech</span>
