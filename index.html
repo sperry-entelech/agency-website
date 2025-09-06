@@ -20,8 +20,8 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: #ffffff;
-      color: #1f2937;
+      background: #0a0a0a;
+      color: #ffffff;
       line-height: 1.6;
       min-height: 100vh;
     }
@@ -35,9 +35,9 @@
     /* Logo Section */
     .logo-section {
       text-align: center;
-      padding: 48px 0 32px 0;
-      background: #ffffff;
-      border-bottom: 1px solid #f1f5f9;
+      padding: 64px 0 48px 0;
+      background: #0a0a0a;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .logo {
@@ -48,29 +48,30 @@
     }
 
     .logo-icon {
-      width: 48px;
-      height: 48px;
-      background: #1f2937;
-      border-radius: 8px;
+      width: 64px;
+      height: 64px;
+      background: rgba(31, 41, 55, 0.8);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 16px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-right: 24px;
+      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2), 0 2px 8px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .logo-text {
-      font-size: 28px;
-      font-weight: 600;
-      color: #1f2937;
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
       letter-spacing: -0.5px;
     }
 
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 64px 0;
-      border-bottom: 1px solid #e5e7eb;
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       margin-bottom: 64px;
     }
 
@@ -97,15 +98,18 @@
     }
 
     .main-headline {
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 24px;
-      color: #111827;
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 32px;
+      color: #ffffff;
     }
 
     .highlight-text {
-      color: #1f2937;
+      background: linear-gradient(135deg, #00d4ff, #0099cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .sub-headline {
@@ -117,11 +121,11 @@
     }
 
     .sub-text {
-      font-size: 18px;
-      color: #6b7280;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.8);
       font-weight: 400;
       margin-bottom: 32px;
-      max-width: 800px;
+      max-width: 900px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -133,23 +137,25 @@
     }
 
     .cta-button {
-      background: #1f2937;
-      color: white;
-      border: 1px solid #1f2937;
-      padding: 16px 32px;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: 600;
+      background: linear-gradient(135deg, #00d4ff, #0099cc);
+      color: #000000;
+      border: 1px solid transparent;
+      padding: 18px 36px;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 700;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
       gap: 8px;
+      box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
     }
 
     .cta-button:hover {
-      background: #374151;
-      border-color: #374151;
+      background: linear-gradient(135deg, #0099cc, #006699);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(0, 212, 255, 0.4);
     }
 
     .cta-text {
@@ -171,27 +177,27 @@
 
     /* Section */
     .problem-section {
-      background: #ffffff;
-      padding: 64px 0;
+      background: #0a0a0a;
+      padding: 80px 0;
       margin: 0;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .section-title {
-      font-size: 36px;
-      font-weight: 700;
+      font-size: 42px;
+      font-weight: 800;
       text-align: center;
-      margin-bottom: 16px;
-      color: #111827;
+      margin-bottom: 24px;
+      color: #ffffff;
     }
 
     .section-subtitle {
-      font-size: 18px;
-      color: #6b7280;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.7);
       font-weight: 400;
       text-align: center;
-      margin-bottom: 48px;
-      max-width: 600px;
+      margin-bottom: 64px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -203,11 +209,13 @@
     }
 
     .problem-card {
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
     .problem-icon {
@@ -216,21 +224,22 @@
     }
 
     .problem-title {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: #111827;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #ffffff;
     }
 
     .problem-description {
-      color: #6b7280;
-      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
     }
 
     /* Benefits Section */
     .benefits-section {
-      padding: 64px 0;
-      border-bottom: 1px solid #e5e7eb;
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: #0a0a0a;
     }
 
     .benefits-list {
@@ -240,68 +249,71 @@
     .benefit-item {
       display: flex;
       align-items: flex-start;
-      background: #ffffff;
-      border-radius: 8px;
-      padding: 32px;
-      border: 1px solid #e5e7eb;
-      margin-bottom: 24px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 32px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
     .benefit-icon {
-      background: #f3f4f6;
-      color: #1f2937;
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
+      background: rgba(0, 212, 255, 0.1);
+      color: #00d4ff;
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 24px;
+      margin-right: 32px;
       flex-shrink: 0;
-      border: 1px solid #e5e7eb;
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      box-shadow: 0 4px 16px rgba(0, 212, 255, 0.1);
     }
 
     .benefit-content h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #111827;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #ffffff;
     }
 
     .benefit-content p {
-      color: #6b7280;
-      font-size: 16px;
-      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+      line-height: 1.7;
     }
 
     /* About Section */
     .about-section {
-      background: #f9fafb;
-      padding: 64px 48px;
-      border-bottom: 1px solid #e5e7eb;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 80px 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       text-align: center;
     }
 
     .about-text {
-      font-size: 16px;
-      color: #6b7280;
-      line-height: 1.6;
-      max-width: 800px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     /* Final CTA Section */
     .final-cta {
       text-align: center;
-      padding: 64px 0;
-      background: #ffffff;
+      padding: 80px 0;
+      background: #0a0a0a;
     }
 
     .final-cta h3 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: #111827;
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: #ffffff;
     }
 
     .final-cta-subtitle {
@@ -318,10 +330,11 @@
 
     /* FAQ Section */
     .faq-section {
-      background: #000000;
+      background: rgba(255, 255, 255, 0.03);
       color: #ffffff;
       padding: 80px 0;
       margin: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .faq-title {
@@ -354,12 +367,12 @@
 
     /* Footer */
     .footer {
-      background: #f9fafb;
-      color: #6b7280;
+      background: #000000;
+      color: rgba(255, 255, 255, 0.6);
       text-align: center;
-      padding: 24px 0;
+      padding: 32px 0;
       font-size: 14px;
-      border-top: 1px solid #e5e7eb;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* Responsive Design */
@@ -437,7 +450,7 @@
     <div class="logo-section">
       <div class="logo">
         <div class="logo-icon">
-          <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Triquetra-inspired geometric design -->
             <defs>
               <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
