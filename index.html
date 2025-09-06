@@ -441,74 +441,62 @@
       <div class="logo">
         <div class="logo-icon">
           <svg width="160" height="160" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <!-- Grid pattern for wireframe effect -->
-              <pattern id="wireframeGrid" patternUnits="userSpaceOnUse" width="20" height="20">
-                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#999" stroke-width="1" opacity="0.3"/>
-              </pattern>
-            </defs>
-            
-            <!-- Wireframe spheres - positioned behind the three circles -->
-            <g opacity="0.4">
+            <!-- Wireframe spheres with proper 3D grid mapping -->
+            <g opacity="0.25" stroke="#999" stroke-width="0.8" fill="none">
               <!-- Top sphere -->
-              <ellipse cx="200" cy="140" rx="80" ry="50" fill="none" stroke="#666" stroke-width="2"/>
-              <ellipse cx="200" cy="140" rx="60" ry="40" fill="none" stroke="#777" stroke-width="1"/>
-              <ellipse cx="200" cy="140" rx="40" ry="25" fill="none" stroke="#888" stroke-width="1"/>
-              <ellipse cx="200" cy="140" rx="25" ry="15" fill="none" stroke="#999" stroke-width="0.6"/>
-              <!-- Detailed vertical grid lines -->
-              <ellipse cx="200" cy="140" rx="10" ry="50" fill="none" stroke="#777" stroke-width="0.8" opacity="0.7"/>
-              <ellipse cx="200" cy="140" rx="25" ry="50" fill="none" stroke="#777" stroke-width="0.6" opacity="0.5"/>
-              <ellipse cx="200" cy="140" rx="40" ry="50" fill="none" stroke="#777" stroke-width="0.6" opacity="0.5"/>
-              <ellipse cx="200" cy="140" rx="60" ry="50" fill="none" stroke="#777" stroke-width="0.6" opacity="0.4"/>
-              <!-- Grid lines on top sphere -->
-              <path d="M 140 140 Q 200 110 260 140 Q 200 170 140 140" fill="none" stroke="#777" stroke-width="1" opacity="0.6"/>
-              <path d="M 140 130 Q 200 100 260 130" fill="none" stroke="#777" stroke-width="0.5" opacity="0.4"/>
-              <path d="M 140 150 Q 200 180 260 150" fill="none" stroke="#777" stroke-width="0.5" opacity="0.4"/>
+              <circle cx="200" cy="140" r="75"/>
+              <!-- Longitude lines (vertical curves) -->
+              <ellipse cx="200" cy="140" rx="15" ry="75"/>
+              <ellipse cx="200" cy="140" rx="30" ry="75"/>
+              <ellipse cx="200" cy="140" rx="45" ry="75"/>
+              <ellipse cx="200" cy="140" rx="60" ry="75"/>
+              <!-- Latitude lines (horizontal curves) -->
+              <ellipse cx="200" cy="140" rx="75" ry="15"/>
+              <ellipse cx="200" cy="140" rx="70" ry="30"/>
+              <ellipse cx="200" cy="140" rx="60" ry="45"/>
+              <ellipse cx="200" cy="140" rx="45" ry="60"/>
+              <ellipse cx="200" cy="140" rx="25" ry="70"/>
               
               <!-- Bottom-left sphere -->
-              <ellipse cx="140" cy="240" rx="80" ry="50" fill="none" stroke="#666" stroke-width="2"/>
-              <ellipse cx="140" cy="240" rx="60" ry="40" fill="none" stroke="#777" stroke-width="1"/>
-              <ellipse cx="140" cy="240" rx="40" ry="25" fill="none" stroke="#888" stroke-width="1"/>
-              <!-- Grid lines on bottom-left sphere -->
-              <path d="M 80 240 Q 140 210 200 240 Q 140 270 80 240" fill="none" stroke="#777" stroke-width="1" opacity="0.6"/>
+              <circle cx="140" cy="240" r="75"/>
+              <ellipse cx="140" cy="240" rx="15" ry="75"/>
+              <ellipse cx="140" cy="240" rx="30" ry="75"/>
+              <ellipse cx="140" cy="240" rx="45" ry="75"/>
+              <ellipse cx="140" cy="240" rx="60" ry="75"/>
+              <ellipse cx="140" cy="240" rx="75" ry="15"/>
+              <ellipse cx="140" cy="240" rx="70" ry="30"/>
+              <ellipse cx="140" cy="240" rx="60" ry="45"/>
+              <ellipse cx="140" cy="240" rx="45" ry="60"/>
+              <ellipse cx="140" cy="240" rx="25" ry="70"/>
               
               <!-- Bottom-right sphere -->
-              <ellipse cx="260" cy="240" rx="80" ry="50" fill="none" stroke="#666" stroke-width="2"/>
-              <ellipse cx="260" cy="240" rx="60" ry="40" fill="none" stroke="#777" stroke-width="1"/>
-              <ellipse cx="260" cy="240" rx="40" ry="25" fill="none" stroke="#888" stroke-width="1"/>
-              <!-- Grid lines on bottom-right sphere -->
-              <path d="M 200 240 Q 260 210 320 240 Q 260 270 200 240" fill="none" stroke="#777" stroke-width="1" opacity="0.6"/>
+              <circle cx="260" cy="240" r="75"/>
+              <ellipse cx="260" cy="240" rx="15" ry="75"/>
+              <ellipse cx="260" cy="240" rx="30" ry="75"/>
+              <ellipse cx="260" cy="240" rx="45" ry="75"/>
+              <ellipse cx="260" cy="240" rx="60" ry="75"/>
+              <ellipse cx="260" cy="240" rx="75" ry="15"/>
+              <ellipse cx="260" cy="240" rx="70" ry="30"/>
+              <ellipse cx="260" cy="240" rx="60" ry="45"/>
+              <ellipse cx="260" cy="240" rx="45" ry="60"/>
+              <ellipse cx="260" cy="240" rx="25" ry="70"/>
             </g>
             
-            <!-- Main triquetra: Three interlocking circles -->
-            <g fill="none">
-              <!-- Circle 1 (top) - thick black outline -->
-              <circle cx="200" cy="160" r="70" stroke="#000000" stroke-width="8"/>
-              <!-- Circle 2 (bottom-left) - thick black outline -->
-              <circle cx="160" cy="220" r="70" stroke="#000000" stroke-width="8"/>
-              <!-- Circle 3 (bottom-right) - thick black outline -->
-              <circle cx="240" cy="220" r="70" stroke="#000000" stroke-width="8"/>
-              
-              <!-- Inner accent circles for depth -->
-              <circle cx="200" cy="160" r="50" stroke="#333333" stroke-width="3" opacity="0.6"/>
-              <circle cx="160" cy="220" r="50" stroke="#333333" stroke-width="3" opacity="0.6"/>
-              <circle cx="240" cy="220" r="50" stroke="#333333" stroke-width="3" opacity="0.6"/>
+            <!-- Celtic Triquetra - three interlocking pointed ovals (vesica piscis) -->
+            <g fill="white" stroke="#000000" stroke-width="14">
+              <!-- Top pointed oval -->
+              <path d="M 200 80 C 250 80 290 120 290 170 C 290 220 250 260 200 260 C 150 260 110 220 110 170 C 110 120 150 80 200 80 Z"/>
+              <!-- Bottom-left pointed oval (rotated 120 degrees) -->
+              <path d="M 120 180 C 120 130 160 90 210 90 C 260 90 300 130 300 180 C 300 230 260 270 210 270 C 160 270 120 230 120 180 Z"/>
+              <!-- Bottom-right pointed oval (rotated 240 degrees) -->
+              <path d="M 280 180 C 280 230 240 270 190 270 C 140 270 100 230 100 180 C 100 130 140 90 190 90 C 240 90 280 130 280 180 Z"/>
             </g>
             
-            <!-- Central triangle connecting the intersections -->
-            <path d="M 200 190 L 180 200 L 220 200 Z" fill="none" stroke="#444" stroke-width="4" opacity="0.7"/>
-            
-            <!-- Subtle animation points -->
-            <g>
-              <circle cx="200" cy="190" r="3" fill="#555">
-                <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
-              </circle>
-              <circle cx="180" cy="200" r="2" fill="#666">
-                <animate attributeName="opacity" values="1;0.4;1" dur="3s" begin="1s" repeatCount="indefinite"/>
-              </circle>
-              <circle cx="220" cy="200" r="2" fill="#666">
-                <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2s" repeatCount="indefinite"/>
-              </circle>
+            <!-- Inner triquetra for depth -->
+            <g fill="none" stroke="#333333" stroke-width="6" opacity="0.4">
+              <path d="M 200 110 C 230 110 255 135 255 165 C 255 195 230 220 200 220 C 170 220 145 195 145 165 C 145 135 170 110 200 110 Z"/>
+              <path d="M 150 200 C 150 170 175 145 205 145 C 235 145 260 170 260 200 C 260 230 235 255 205 255 C 175 255 150 230 150 200 Z"/>
+              <path d="M 250 200 C 250 230 225 255 195 255 C 165 255 140 230 140 200 C 140 170 165 145 195 145 C 225 145 250 170 250 200 Z"/>
             </g>
           </svg>
         </div>
