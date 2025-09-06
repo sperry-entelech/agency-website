@@ -482,21 +482,35 @@
               <ellipse cx="260" cy="240" rx="25" ry="70"/>
             </g>
             
-            <!-- Celtic Triquetra - three interlocking pointed ovals (vesica piscis) -->
-            <g fill="white" stroke="#000000" stroke-width="14">
-              <!-- Top pointed oval -->
-              <path d="M 200 80 C 250 80 290 120 290 170 C 290 220 250 260 200 260 C 150 260 110 220 110 170 C 110 120 150 80 200 80 Z"/>
-              <!-- Bottom-left pointed oval (rotated 120 degrees) -->
-              <path d="M 120 180 C 120 130 160 90 210 90 C 260 90 300 130 300 180 C 300 230 260 270 210 270 C 160 270 120 230 120 180 Z"/>
-              <!-- Bottom-right pointed oval (rotated 240 degrees) -->
-              <path d="M 280 180 C 280 230 240 270 190 270 C 140 270 100 230 100 180 C 100 130 140 90 190 90 C 240 90 280 130 280 180 Z"/>
+            <!-- Celtic Triquetra - three interlocking pointed arcs -->
+            <g fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round">
+              <!-- Top arc pointing upward -->
+              <path d="M 140 200 A 60 60 0 0 1 260 200"/>
+              <!-- Bottom-left arc pointing down-left -->  
+              <path d="M 200 120 A 60 60 0 0 1 160 240"/>
+              <!-- Bottom-right arc pointing down-right -->
+              <path d="M 200 120 A 60 60 0 0 0 240 240"/>
             </g>
             
-            <!-- Inner triquetra for depth -->
-            <g fill="none" stroke="#333333" stroke-width="6" opacity="0.4">
-              <path d="M 200 110 C 230 110 255 135 255 165 C 255 195 230 220 200 220 C 170 220 145 195 145 165 C 145 135 170 110 200 110 Z"/>
-              <path d="M 150 200 C 150 170 175 145 205 145 C 235 145 260 170 260 200 C 260 230 235 255 205 255 C 175 255 150 230 150 200 Z"/>
-              <path d="M 250 200 C 250 230 225 255 195 255 C 165 255 140 230 140 200 C 140 170 165 145 195 145 C 225 145 250 170 250 200 Z"/>
+            <!-- Triquetra knot intersections (white overlays for proper interlacing) -->
+            <g fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round">
+              <!-- Cover intersections to create over/under weave effect -->
+              <path d="M 170 160 A 30 30 0 0 1 200 140"/>
+              <path d="M 230 160 A 30 30 0 0 0 200 140"/>
+              <path d="M 170 220 A 30 30 0 0 0 200 200"/>
+            </g>
+            
+            <!-- Triquetra main strokes (repeated for clean over/under) -->
+            <g fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round">
+              <!-- Top arc -->
+              <path d="M 140 200 A 60 60 0 0 1 200 140"/>
+              <path d="M 200 140 A 60 60 0 0 1 260 200"/>
+              <!-- Bottom-left arc -->
+              <path d="M 200 120 A 60 60 0 0 1 140 180"/>
+              <path d="M 140 180 A 60 60 0 0 1 160 240"/>
+              <!-- Bottom-right arc -->
+              <path d="M 200 120 A 60 60 0 0 0 260 180"/>
+              <path d="M 260 180 A 60 60 0 0 0 240 240"/>
             </g>
           </svg>
         </div>
