@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Entelech - The Premier AI-Enabled Growth Operations Consulting Firm</title>
-  <meta name="description" content="The premier AI-enabled frontend growth operations consulting firm specializing in intelligent client portals, automated workflows, and AI-enhanced business transformation for service companies." />
+  <meta name="description" content="The premier AI-enabled growth operations consulting firm specializing in intelligent client portals, automated workflows, and AI-enhanced business transformation for service companies." />
+  <meta name="keywords" content="AI consulting, growth operations, business automation, client portals, proposal systems, service business transformation" />
+  <meta name="author" content="Entelech" />
+  <meta property="og:title" content="Entelech - Premier AI-Enabled Growth Operations Consulting" />
+  <meta property="og:description" content="Transform your business operations with custom-branded applications that convert better and cost less." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://entelech.com" />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -425,55 +432,102 @@
     }
 
     /* Responsive Design */
+    /* Trust Signal Styling */
+    .trust-signals {
+      text-align: center;
+      padding: 48px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .trust-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 24px;
+    }
+
+    .trust-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #6b7280;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .trust-icon {
+      width: 20px;
+      height: 20px;
+      color: #10b981;
+    }
+
     @media (max-width: 768px) {
       .main-headline {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 1.3;
       }
 
-      .attention-line {
-        font-size: 16px;
+      .hero {
+        padding: 48px 0;
       }
 
-      .sub-headline {
-        font-size: 18px;
+      .section-title {
+        font-size: 24px;
       }
 
       .sub-text {
         font-size: 16px;
+        margin-bottom: 20px;
       }
 
       .cta-button {
         font-size: 16px;
-        padding: 14px 24px;
+        padding: 16px 32px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
       }
 
-      .section-title {
-        font-size: 28px;
+      .nav-menu {
+        gap: 16px;
+        font-size: 14px;
       }
 
-      .problem-section,
-      .about-section {
-        padding: 48px 24px;
+      .nav-cta {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+
+      .logo-text {
+        font-size: 20px;
       }
 
       .benefit-item {
-        flex-direction: column;
-        text-align: center;
+        text-align: left;
+        padding: 24px;
       }
 
-      .benefit-icon {
-        margin-right: 0;
-        margin-bottom: 16px;
+      .benefit-content h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
       }
-      
-      /* Mobile responsiveness for new sections */
-      div[style*="grid-template-columns: 1fr 1fr"] {
-        grid-template-columns: 1fr !important;
-        gap: 24px !important;
+
+      .trust-items {
+        gap: 24px;
       }
-      
-      .problem-grid {
-        grid-template-columns: 1fr !important;
+
+      .trust-item {
+        font-size: 13px;
       }
     }
 
@@ -511,7 +565,7 @@
         </div>
         
         <!-- Navigation Menu -->
-        <nav class="nav-menu">
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
           <a href="#about" class="nav-link">About Us</a>
           <a href="#services" class="nav-link">Services</a>
           <a href="#testimonials" class="nav-link">Case Studies</a>
@@ -551,9 +605,42 @@
       <!-- Enhanced CTA Button -->
       <div class="cta-container">
         <div class="cta-glow"></div>
-        <a href="https://calendly.com/joinentelech/discovery-call" target="_blank" rel="noopener noreferrer" class="cta-button">
+        <a href="https://calendly.com/joinentelech/discovery-call" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Schedule consultation call via Calendly">
           SCHEDULE CONSULTATION
         </a>
+      </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals" role="complementary" aria-label="Trust and credibility indicators">
+      <div class="container">
+        <h2 class="trust-title">Trusted by Forward-Thinking Service Businesses</h2>
+        <div class="trust-items">
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            <span>16% Higher Win Rates</span>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+            </svg>
+            <span>Enterprise-Grade Security</span>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Proven Implementation Process</span>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M1 6a3 3 0 013-3h12a3 3 0 013 3v8a3 3 0 01-3 3H4a3 3 0 01-3-3V6zm4 2a1 1 0 000 2h10a1 1 0 100-2H5z" clip-rule="evenodd" />
+            </svg>
+            <span>No Monthly Platform Fees</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -574,7 +661,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="benefits-section">
+    <section id="services" class="benefits-section">
       <h2 class="section-title">AI-Enabled Frontend Applications We Build</h2>
       <p class="section-subtitle">Intelligent, custom-branded systems enhanced with AI that learn from client behavior and optimize conversion paths.</p>
       
