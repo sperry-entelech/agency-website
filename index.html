@@ -27,8 +27,8 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: #000000;
-      color: #ffffff;
+      background: #efefef;
+      color: #1f2937;
       min-height: 100vh;
       overflow-x: hidden;
     }
@@ -41,7 +41,7 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+      background: linear-gradient(135deg, #efefef 0%, #e5e5e5 50%, #efefef 100%);
       background-size: 400% 400%;
       animation: gradientShift 8s ease-in-out infinite;
     }
@@ -60,9 +60,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+      background-image: radial-gradient(circle at 20% 50%, rgba(31, 41, 55, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(31, 41, 55, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(31, 41, 55, 0.04) 0%, transparent 50%);
       animation: particleFloat 12s ease-in-out infinite;
     }
 
@@ -104,35 +104,38 @@
     .logo-icon {
       width: 80px;
       height: 80px;
-      background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
+      background: #efefef;
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease;
       position: relative;
-      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(31, 41, 55, 0.1);
     }
 
     .logo-icon::after {
-      content: 'E';
-      color: #000000;
-      font-size: 36px;
-      font-weight: 800;
-      font-family: 'Inter', sans-serif;
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10c-22.09 0-40 17.91-40 40s17.91 40 40 40 40-17.91 40-40S72.09 10 50 10zm0 5c19.33 0 35 15.67 35 35s-15.67 35-35 35S15 69.33 15 50 30.67 15 50 15zm0 5c-16.57 0-30 13.43-30 30s13.43 30 30 30 30-13.43 30-30S66.57 20 50 20zm0 5c13.81 0 25 11.19 25 25s-11.19 25-25 25S25 63.81 25 50 36.19 25 50 25zm0 5c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20S61.05 30 50 30zm0 5c8.28 0 15 6.72 15 15s-6.72 15-15 15-15-6.72-15-15S41.72 35 50 35zm0 5c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S55.52 40 50 40zm0 5c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5z" fill="none" stroke="%23000" stroke-width="1"/></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .logo-icon:hover {
       transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 12px 48px rgba(255, 255, 255, 0.15);
+      box-shadow: 0 12px 48px rgba(31, 41, 55, 0.15);
     }
 
     .logo-text {
       font-size: 32px;
       font-weight: 800;
-      color: #ffffff;
+      color: #1f2937;
       letter-spacing: -1px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 2px 8px rgba(31, 41, 55, 0.3);
     }
 
     /* Main Content */
@@ -157,8 +160,8 @@
     }
 
     @keyframes textGlow {
-      0%, 100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
-      50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+      0%, 100% { text-shadow: 0 0 10px rgba(31, 41, 55, 0.3); }
+      50% { text-shadow: 0 0 20px rgba(31, 41, 55, 0.5); }
     }
 
     .main-headline {
@@ -166,8 +169,8 @@
       font-weight: 700;
       line-height: 1.1;
       margin-bottom: 24px;
-      color: #ffffff;
-      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+      color: #1f2937;
+      text-shadow: 0 4px 16px rgba(31, 41, 55, 0.3);
     }
 
     .sub-headline {
@@ -184,7 +187,7 @@
     .selection-prompt {
       font-size: 20px;
       font-weight: 600;
-      color: #ffffff;
+      color: #1f2937;
       margin-bottom: 40px;
       animation: pulseGlow 2s ease-in-out infinite;
     }
@@ -197,7 +200,7 @@
     /* Industry Selection Cards */
     .industry-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 32px;
       max-width: 1000px;
       margin: 0 auto;
@@ -210,12 +213,12 @@
     }
 
     .industry-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(31, 41, 55, 0.15);
       border-radius: 16px;
       padding: 40px 32px;
       text-decoration: none;
-      color: #ffffff;
+      color: #1f2937;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
       overflow: hidden;
@@ -230,7 +233,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(31, 41, 55, 0.1), transparent);
       transition: left 0.6s;
     }
 
@@ -240,9 +243,9 @@
 
     .industry-card:hover {
       transform: translateY(-8px) scale(1.02);
-      border-color: rgba(255, 255, 255, 0.3);
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 16px 64px rgba(0, 0, 0, 0.3);
+      border-color: rgba(31, 41, 55, 0.3);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 16px 64px rgba(31, 41, 55, 0.2);
     }
 
     .card-icon {
@@ -278,7 +281,7 @@
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 12px;
-      color: #ffffff;
+      color: #1f2937;
     }
 
     .card-subtitle {
@@ -301,7 +304,7 @@
       gap: 8px;
       font-size: 14px;
       font-weight: 600;
-      color: #ffffff;
+      color: #1f2937;
       opacity: 0.8;
       transition: all 0.3s ease;
     }
@@ -333,6 +336,8 @@
 
       .industry-grid {
         grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
         gap: 24px;
       }
 
@@ -361,7 +366,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #000000;
+      background: #efefef;
       z-index: 9999;
       display: flex;
       align-items: center;
@@ -379,8 +384,8 @@
     .loader-spinner {
       width: 40px;
       height: 40px;
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      border-left-color: #ffffff;
+      border: 2px solid rgba(31, 41, 55, 0.1);
+      border-left-color: #1f2937;
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
@@ -419,17 +424,18 @@
         Strategic Consulting Firm
       </h1>
       <p class="sub-headline">
-        We build custom systems that deliver measurable revenue results for B2B service companies
+        We build custom systems that deliver measurable revenue results for B2B service companies<br><br>
+        <span style="font-size: 16px; font-weight: 600; color: #059669;">✓ Guaranteed results or you don't pay</span>
       </p>
 
       <div class="selection-prompt">
-        Select Your Industry:
+        Who We Serve Most:
       </div>
 
       <!-- Industry Selection -->
       <div class="industry-grid">
         <a href="/agencies.html" class="industry-card agencies">
-          <div class="card-icon">🏢</div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #dc2626, #991b1b); color: white; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center;">A</div>
           <div class="card-title">Marketing Agencies</div>
           <div class="card-subtitle">Client Onboarding Systems</div>
           <div class="card-description">
@@ -439,7 +445,7 @@
         </a>
 
         <a href="/coaches.html" class="industry-card coaches">
-          <div class="card-icon">💡</div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #7c3aed, #5b21b6); color: white; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center;">C</div>
           <div class="card-title">Business Coaches</div>
           <div class="card-subtitle">Lead Nurturing Automation</div>
           <div class="card-description">
@@ -449,7 +455,7 @@
         </a>
 
         <a href="/developers.html" class="industry-card developers">
-          <div class="card-icon">⚡</div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #0891b2, #0e7490); color: white; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center;">D</div>
           <div class="card-title">Software Developers</div>
           <div class="card-subtitle">Proposal Speed Systems</div>
           <div class="card-description">
