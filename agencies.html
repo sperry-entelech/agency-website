@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Increase Client Lifetime Value 40% - Entelech</title>
+  <meta name="description" content="Poor onboarding kills client LTV. Professional onboarding systems increase client retention 18 months and reduce churn by 60%. Calculate your revenue impact." />
+  <meta name="keywords" content="client lifetime value, agency client retention, reduce client churn, professional onboarding ROI" />
+  <meta name="author" content="Entelech" />
+  <meta property="og:title" content="Increase Client Lifetime Value 40%" />
+  <meta property="og:description" content="Professional onboarding increases client retention 18 months and reduces churn by 60%." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://entelech.net/agencies" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1f2937;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: 'E';
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .logo-icon:hover {
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1f2937;
+      letter-spacing: -0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover .logo-text {
+      color: #111827;
+      transform: translateY(-2px);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      color: #6b7280;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: #1f2937;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1f2937;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: #1f2937;
+      color: #ffffff !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .nav-cta:hover {
+      background: #111827;
+      transform: translateY(-1px);
+    }
+
+    .nav-cta::after {
+      display: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 64px 0;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 64px;
+    }
+
+    .main-headline {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: #111827;
+    }
+
+    .highlight-text {
+      color: #0369a1;
+    }
+
+    .sub-headline {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      color: #374151;
+    }
+
+    .sub-text {
+      font-size: 18px;
+      color: #6b7280;
+      font-weight: 400;
+      margin-bottom: 32px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 20px;
+      color: #6b7280;
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    .cta-container {
+      display: inline-block;
+      margin: 32px 0;
+      position: relative;
+    }
+
+    .cta-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, rgba(31, 41, 55, 0.2) 0%, transparent 70%);
+      border-radius: 6px;
+      filter: blur(12px);
+      z-index: -1;
+    }
+
+    .cta-button {
+      background: #1f2937;
+      color: white;
+      border: 1px solid #1f2937;
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.2s ease;
+      gap: 8px;
+    }
+
+    .cta-button:hover {
+      background: #111827;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 41, 55, 0.2);
+    }
+
+    .problem-section {
+      margin: 64px 0;
+    }
+
+    .pain-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .pain-point {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .pain-point h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #dc2626;
+      margin-bottom: 12px;
+    }
+
+    .pain-point p {
+      color: #7f1d1d;
+      line-height: 1.6;
+    }
+
+    .ltv-impact {
+      background: #f0f9ff;
+      border-radius: 16px;
+      padding: 48px;
+      margin: 48px 0;
+      border: 1px solid #bae6fd;
+    }
+
+    .solution-features {
+      background: #f0fdf4;
+      border-radius: 16px;
+      padding: 48px;
+      margin: 48px 0;
+      border: 1px solid #dcfce7;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin: 32px 0;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .feature-item h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .feature-item p {
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .outcome-item {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .outcome-metric {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0369a1;
+      margin-bottom: 8px;
+    }
+
+    .outcome-description {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0c4a6e;
+    }
+
+    .roi-calculator {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 48px;
+      margin: 48px 0;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    .social-proof {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 48px 0;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .testimonial {
+      font-size: 18px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .risk-reversal {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    .risk-reversal h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 16px;
+    }
+
+    .risk-reversal p {
+      color: #1e40af;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .main-headline {
+        font-size: 36px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .pain-points {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .outcomes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <div class="logo-icon" alt="Entelech Logo"></div>
+          <span class="logo-text">Entelech</span>
+        </a>
+
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+          <a href="/agencies" class="nav-link">For Agencies</a>
+          <a href="/coaches" class="nav-link">For Coaches</a>
+          <a href="/developers" class="nav-link">For Developers</a>
+          <a href="/#about" class="nav-link">About</a>
+          <a href="https://calendly.com/joinentelech/agency-discovery" class="nav-link nav-cta">Book Discovery Call</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- VARIANT C: LTV/Churn ROI Focus -->
+    <section class="hero">
+      <h1 class="main-headline">
+        Increase Client <span class="highlight-text">Lifetime Value</span><br>
+        by 40% With Professional Onboarding
+      </h1>
+
+      <p class="sub-headline">
+        Poor onboarding kills client LTV. Professional systems increase client retention 18+ months and reduce churn by 60%.
+      </p>
+
+      <p class="sub-text">
+        Professional client experience: onboarding.youragency.com<br>
+        Calculate the revenue impact below. Own your retention advantage.
+      </p>
+
+      <div class="cta-container">
+        <div class="cta-glow"></div>
+        <a href="https://calendly.com/joinentelech/agency-discovery" target="_blank" rel="noopener noreferrer" class="cta-button">
+          CALCULATE YOUR LTV IMPACT
+        </a>
+      </div>
+    </section>
+
+    <!-- LTV Impact Section -->
+    <section class="ltv-impact">
+      <h2 class="section-title" style="text-align: center; color: #0369a1;">The Hidden Cost of Poor Onboarding</h2>
+      <p style="text-align: center; font-size: 18px; color: #0c4a6e; margin-bottom: 32px;">
+        Every chaotic onboarding experience reduces client lifetime value by 6-8 months
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; margin: 32px 0;">
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 32px;">
+          <h4 style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 16px;">Poor Onboarding Impact</h4>
+          <ul style="color: #6b7280; line-height: 1.8;">
+            <li>Clients question your professionalism from day one</li>
+            <li>Delays create frustration and erode trust</li>
+            <li>Manual process signals "small agency" perception</li>
+            <li>First impression drives entire relationship duration</li>
+          </ul>
+          <div style="margin-top: 20px; padding: 16px; background: #fef2f2; border-radius: 8px;">
+            <div style="font-size: 18px; font-weight: 600; color: #dc2626;">Average Client LTV: 14 months</div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 32px;">
+          <h4 style="font-size: 20px; font-weight: 600; color: #059669; margin-bottom: 16px;">Professional Onboarding Impact</h4>
+          <ul style="color: #6b7280; line-height: 1.8;">
+            <li>Clients see enterprise-level organization</li>
+            <li>Smooth process builds confidence in results</li>
+            <li>Professional systems justify premium pricing</li>
+            <li>Strong first impression extends relationship</li>
+          </ul>
+          <div style="margin-top: 20px; padding: 16px; background: #f0fdf4; border-radius: 8px;">
+            <div style="font-size: 18px; font-weight: 600; color: #059669;">Average Client LTV: 32+ months</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROI Calculator First -->
+    <section class="roi-calculator">
+      <h3 style="font-size: 28px; font-weight: 700; color: #1f2937; margin-bottom: 24px;">Client LTV Impact Calculator</h3>
+      <div style="max-width: 700px; margin: 0 auto;">
+        <p style="font-size: 18px; color: #6b7280; margin-bottom: 24px;">
+          Average client value: $2,500/month. Current retention: 14 months. Professional onboarding retention: 32+ months.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0;">
+          <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 24px;">
+            <div style="font-size: 16px; font-weight: 600; color: #dc2626; margin-bottom: 8px;">Current LTV</div>
+            <div style="font-size: 24px; font-weight: 700; color: #dc2626;">$35,000</div>
+            <div style="color: #7f1d1d; font-size: 14px;">$2,500 × 14 months</div>
+          </div>
+
+          <div style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 8px; padding: 24px;">
+            <div style="font-size: 16px; font-weight: 600; color: #059669; margin-bottom: 8px;">Professional LTV</div>
+            <div style="font-size: 24px; font-weight: 700; color: #059669;">$80,000</div>
+            <div style="color: #065f46; font-size: 14px;">$2,500 × 32 months</div>
+          </div>
+        </div>
+
+        <div style="background: #f0f9ff; border: 2px solid #3b82f6; border-radius: 8px; padding: 24px; margin: 24px 0;">
+          <div style="font-size: 18px; font-weight: 600; color: #1e40af; margin-bottom: 8px;">Per-Client Revenue Impact</div>
+          <div style="font-size: 32px; font-weight: 700; color: #1e40af;">+$45,000</div>
+          <div style="color: #1e40af; font-size: 16px;">129% increase in lifetime value</div>
+        </div>
+
+        <p style="color: #6b7280; font-size: 16px; margin-top: 20px;">
+          With 12 new clients per year: <strong style="color: #1f2937;">+$540,000 annual revenue impact</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- Problem Points - LTV Focused -->
+    <section class="problem-section">
+      <h2 class="section-title" style="text-align: center;">Why Clients Leave After 14 Months</h2>
+      <p class="section-subtitle" style="text-align: center;">Poor onboarding sets the wrong expectations and erodes long-term trust</p>
+
+      <div class="pain-points">
+        <div class="pain-point">
+          <h4>Trust Erodes From Day One</h4>
+          <p>Chaotic onboarding makes clients question if you can deliver results. They start looking for alternatives immediately.</p>
+        </div>
+        <div class="pain-point">
+          <h4>Delays Signal Disorganization</h4>
+          <p>When project kickoff takes weeks, clients assume all deliverables will be delayed. Confidence drops permanently.</p>
+        </div>
+        <div class="pain-point">
+          <h4>"Small Agency" Perception</h4>
+          <p>Manual processes make clients think you're amateur. They negotiate rates and look for "bigger" agencies.</p>
+        </div>
+        <div class="pain-point">
+          <h4>Frustration Compounds Over Time</h4>
+          <p>Bad first impression colors every interaction. Clients become difficult and terminate relationships earlier.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Features -->
+    <section class="solution-features">
+      <h2 class="section-title" style="text-align: center; color: #059669;">Client Retention Through Professional Systems</h2>
+      <p style="text-align: center; font-size: 18px; color: #065f46; margin-bottom: 32px;">
+        First impression quality determines relationship length and profitability
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <h4>Enterprise-Grade First Impression</h4>
+          <p>onboarding.youragency.com creates immediate confidence in your capabilities. Clients assume you're a premium agency.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Trust-Building Automation</h4>
+          <p>Systematic, organized process demonstrates competence. Clients relax knowing they chose the right partner.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Premium Justification</h4>
+          <p>Professional systems justify higher rates and longer contracts. Clients don't negotiate with "enterprise" agencies.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Relationship Foundation</h4>
+          <p>Smooth onboarding sets positive expectations for entire partnership. Strong start leads to longer retention.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Referral Quality Improvement</h4>
+          <p>Impressed clients refer higher-value prospects. Professional systems attract better client quality.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Renewal Confidence</h4>
+          <p>Clients who experience professional onboarding renew contracts 18 months longer than industry average.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LTV-Focused Outcomes -->
+    <section class="problem-section">
+      <h2 class="section-title" style="text-align: center;">Client Retention Results</h2>
+      <p class="section-subtitle" style="text-align: center;">Measurable impact on client lifetime value and agency revenue</p>
+
+      <div class="outcomes-grid">
+        <div class="outcome-item">
+          <div class="outcome-metric">40%</div>
+          <div class="outcome-description">Increase in client lifetime value</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-metric">18 months</div>
+          <div class="outcome-description">Longer average client retention</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-metric">60%</div>
+          <div class="outcome-description">Reduction in client churn rate</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-metric">Premium</div>
+          <div class="outcome-description">Pricing justified by professional experience</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+      <p class="testimonial">
+        "Our average client retention went from 14 months to over 2.5 years after implementing professional onboarding. The revenue impact has been massive - clients who experience the system from day one just don't leave."
+      </p>
+      <p class="testimonial-author">— Digital Marketing Agency, $2.3M annual revenue</p>
+    </section>
+
+    <!-- Risk Reversal -->
+    <section class="risk-reversal">
+      <h3>Client Retention Guarantee</h3>
+      <p>
+        If professional onboarding doesn't increase your average client retention by at least 6 months within 12 months, we'll refund your entire investment.
+        You keep complete ownership of the system regardless.
+      </p>
+    </section>
+
+    <!-- Investment -->
+    <section class="problem-section" style="text-align: center;">
+      <h2 class="section-title">Strategic Investment</h2>
+      <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 48px; max-width: 600px; margin: 32px auto;">
+        <div style="font-size: 32px; font-weight: 700; color: #1f2937; margin-bottom: 16px;">
+          $4,000 + $1,200/month
+        </div>
+        <div style="color: #6b7280; margin-bottom: 24px; line-height: 1.6;">
+          One-time build includes professional onboarding system and complete ownership transfer.<br><br>
+          Monthly consulting retainer covers client experience optimization and strategic iteration.
+        </div>
+        <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin: 24px 0;">
+          <p style="color: #1e40af; font-weight: 500; margin: 0;">
+            ✓ System pays for itself with first retained client<br>
+            ✓ Strategic agency growth consulting included<br>
+            ✓ Custom domain: onboarding.youragency.com
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-container">
+        <a href="https://calendly.com/joinentelech/agency-discovery" target="_blank" rel="noopener noreferrer" class="cta-button">
+          CALCULATE YOUR LTV IMPACT
+        </a>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

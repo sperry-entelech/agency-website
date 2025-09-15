@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Nurturing Automation for Business Coaches - Entelech</title>
+  <meta name="description" content="Turn more leads into paying clients. Coaches lose 60% of interested prospects to poor follow-up. We build systems that nurture leads automatically while you focus on delivering results." />
+  <meta name="keywords" content="business coach lead nurturing, coaching automation, lead follow-up system, coach sales funnel" />
+  <meta name="author" content="Entelech" />
+  <meta property="og:title" content="Lead Nurturing Automation for Business Coaches" />
+  <meta property="og:description" content="Increase lead-to-client conversion by 40% with automated nurturing sequences." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://entelech.net/coaches" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1f2937;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header Section */
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .logo-icon::after {
+      content: 'E';
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .logo-icon:hover {
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1f2937;
+      letter-spacing: -0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover .logo-text {
+      color: #111827;
+      transform: translateY(-2px);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      color: #6b7280;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: #1f2937;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1f2937;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: #1f2937;
+      color: #ffffff !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .nav-cta:hover {
+      background: #111827;
+      transform: translateY(-1px);
+    }
+
+    .nav-cta::after {
+      display: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 64px 0;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 64px;
+    }
+
+    .main-headline {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: #111827;
+    }
+
+    .highlight-text {
+      color: #7c3aed;
+    }
+
+    .sub-headline {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      color: #374151;
+    }
+
+    .sub-text {
+      font-size: 18px;
+      color: #6b7280;
+      font-weight: 400;
+      margin-bottom: 32px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 20px;
+      color: #6b7280;
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    /* CTA Button */
+    .cta-container {
+      display: inline-block;
+      margin: 32px 0;
+      position: relative;
+    }
+
+    .cta-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, rgba(31, 41, 55, 0.2) 0%, transparent 70%);
+      border-radius: 6px;
+      filter: blur(12px);
+      z-index: -1;
+    }
+
+    .cta-button {
+      background: #1f2937;
+      color: white;
+      border: 1px solid #1f2937;
+      padding: 16px 32px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.2s ease;
+      gap: 8px;
+    }
+
+    .cta-button:hover {
+      background: #111827;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 41, 55, 0.2);
+    }
+
+    /* Problem Section */
+    .problem-section {
+      margin: 64px 0;
+    }
+
+    .pain-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .pain-point {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .pain-point h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #dc2626;
+      margin-bottom: 12px;
+    }
+
+    .pain-point p {
+      color: #7f1d1d;
+      line-height: 1.6;
+    }
+
+    /* Solution Features */
+    .solution-features {
+      background: #f5f3ff;
+      border-radius: 16px;
+      padding: 48px;
+      margin: 48px 0;
+      border: 1px solid #e9d5ff;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin: 32px 0;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .feature-item h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .feature-item p {
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    /* Outcomes */
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .outcome-item {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .outcome-metric {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0369a1;
+      margin-bottom: 8px;
+    }
+
+    .outcome-description {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0c4a6e;
+    }
+
+    /* ROI Calculator */
+    .roi-calculator {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 48px;
+      margin: 48px 0;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    /* Social Proof */
+    .social-proof {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 48px 0;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .testimonial {
+      font-size: 18px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    /* Risk Reversal */
+    .risk-reversal {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    .risk-reversal h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 16px;
+    }
+
+    .risk-reversal p {
+      color: #1e40af;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-headline {
+        font-size: 36px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .pain-points {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .outcomes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo and Brand -->
+        <a href="/" class="logo">
+          <div class="logo-icon" alt="Entelech Logo"></div>
+          <span class="logo-text">Entelech</span>
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+          <a href="/agencies" class="nav-link">For Agencies</a>
+          <a href="/coaches" class="nav-link">For Coaches</a>
+          <a href="/developers" class="nav-link">For Developers</a>
+          <a href="/#about" class="nav-link">About</a>
+          <a href="https://calendly.com/joinentelech/coach-discovery" class="nav-link nav-cta">Book Discovery Call</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="main-headline">
+        <span class="highlight-text">Turn More Leads</span><br>
+        Into Paying Clients
+      </h1>
+
+      <p class="sub-headline">
+        Coaches lose 60% of interested prospects to poor follow-up. We build systems that nurture leads automatically while you focus on delivering results.
+      </p>
+
+      <p class="sub-text">
+        Custom branded nurturing: nurture.yourcoaching.com<br>
+        Complete ownership from day one. No monthly platform fees.
+      </p>
+
+      <!-- Enhanced CTA Button -->
+      <div class="cta-container">
+        <div class="cta-glow"></div>
+        <a href="https://calendly.com/joinentelech/coach-discovery" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Schedule coach discovery call">
+          SCHEDULE COACHING CONSULTATION
+        </a>
+      </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="problem-section">
+      <h2 class="section-title" style="text-align: center;">Why Great Leads Go Cold</h2>
+      <p class="section-subtitle" style="text-align: center;">60% of interested prospects never become clients due to inconsistent follow-up</p>
+
+      <div class="pain-points">
+        <div class="pain-point">
+          <h4>Prospects Go Cold</h4>
+          <p>You can't follow up consistently when you're focused on client delivery. Interested leads slip through the cracks.</p>
+        </div>
+        <div class="pain-point">
+          <h4>Manual Email Sequences</h4>
+          <p>You're sending the same emails over and over. No time to personalize or optimize your messaging.</p>
+        </div>
+        <div class="pain-point">
+          <h4>Discovery Calls Don't Book</h4>
+          <p>Follow-up is sporadic during busy periods. Prospects lose interest before they book a call.</p>
+        </div>
+        <div class="pain-point">
+          <h4>Leads Fall Through Cracks</h4>
+          <p>When you're focused on delivering client results, potential new clients get forgotten.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Features -->
+    <section class="solution-features">
+      <h2 class="section-title" style="text-align: center; color: #6b46c1;">Lead Nurturing & Follow-Up Automation</h2>
+      <p style="text-align: center; font-size: 18px; color: #553c9a; margin-bottom: 32px;">
+        Increase lead-to-client conversion by 40% with automated nurturing sequences
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <h4>Custom Branded Nurturing</h4>
+          <p>nurture.yourcoaching.com - Professional sequences that build trust and showcase your expertise over time.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Behavioral Trigger Automation</h4>
+          <p>Smart follow-up based on engagement. Different sequences for different levels of interest and interaction.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Discovery Call Booking</h4>
+          <p>Automated scheduling and call preparation. Prospects book when they're ready, not when you remember to follow up.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Value-Delivery Sequences</h4>
+          <p>Share insights and build trust before selling. Position yourself as the expert they want to work with.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Course Enrollment Automation</h4>
+          <p>Seamless transitions from lead nurturing to program enrollment. Remove friction from the buying process.</p>
+        </div>
+
+        <div class="feature-item">
+          <h4>Engagement Tracking</h4>
+          <p>See which leads are most engaged and ready to buy. Focus your personal outreach on qualified prospects.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specific Outcomes -->
+    <section class="problem-section">
+      <h2 class="section-title" style="text-align: center;">Measurable Results</h2>
+      <p class="section-subtitle" style="text-align: center;">What coaches achieve with automated lead nurturing</p>
+
+      <div class="outcomes-grid">
+        <div class="outcome-item">
+          <div class="outcome-metric">40%</div>
+          <div class="outcome-description">Increase lead-to-client conversion rate</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-metric">80%</div>
+          <div class="outcome-description">Automate follow-up communication</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-metric">3x</div>
+          <div class="outcome-description">Book more discovery calls through systematic nurturing</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-metric">Scale</div>
+          <div class="outcome-description">Coaching business without constant manual outreach</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-calculator">
+      <h3 style="font-size: 28px; font-weight: 700; color: #1f2937; margin-bottom: 24px;">Calculate Your ROI</h3>
+      <div style="max-width: 600px; margin: 0 auto;">
+        <p style="font-size: 18px; color: #6b7280; margin-bottom: 24px;">
+          If you get 20 leads per month and charge $3,000 for coaching:
+        </p>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; margin: 24px 0;">
+          <div style="font-size: 24px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">
+            Current: 2 new clients/month = $6,000
+          </div>
+          <div style="color: #6b7280;">
+            20 leads × 10% conversion = 2 clients × $3,000
+          </div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px;">
+          <div style="font-size: 24px; font-weight: 600; color: #7c3aed; margin-bottom: 8px;">
+            With Automation: 3 clients/month = $9,000
+          </div>
+          <div style="color: #6b7280;">
+            40% improvement = +$3,000 monthly revenue
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+      <p class="testimonial">
+        "The nurturing system completely changed my business. I went from manually chasing leads to having qualified prospects booking discovery calls automatically. Game changer."
+      </p>
+      <p class="testimonial-author">— Business Coach, Austin TX</p>
+    </section>
+
+    <!-- Risk Reversal -->
+    <section class="risk-reversal">
+      <h3>20% Rule Risk Reversal</h3>
+      <p>
+        If the system doesn't increase your lead-to-client conversion by at least 20% within 90 days, we'll refund 100% of your investment.
+        Plus, you keep complete ownership of everything we built.
+      </p>
+    </section>
+
+    <!-- Investment -->
+    <section class="problem-section" style="text-align: center;">
+      <h2 class="section-title">Investment</h2>
+      <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 48px; max-width: 600px; margin: 32px auto;">
+        <div style="font-size: 32px; font-weight: 700; color: #1f2937; margin-bottom: 16px;">
+          $3,000 + $900/month
+        </div>
+        <div style="color: #6b7280; margin-bottom: 24px; line-height: 1.6;">
+          One-time setup includes custom nurturing system, behavioral automation, and complete ownership transfer.<br><br>
+          Optional maintenance covers hosting, updates, and support.
+        </div>
+        <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin: 24px 0;">
+          <p style="color: #1e40af; font-weight: 500; margin: 0;">
+            ✓ Complete ownership from day one<br>
+            ✓ No vendor lock-in or system access fees<br>
+            ✓ Custom domain: nurture.yourcoaching.com
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-container">
+        <a href="https://calendly.com/joinentelech/coach-discovery" target="_blank" rel="noopener noreferrer" class="cta-button">
+          SCHEDULE COACHING CONSULTATION
+        </a>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
