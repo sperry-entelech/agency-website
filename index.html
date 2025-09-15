@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entelech - The Premier AI-Enabled Growth Operations Consulting Firm</title>
-  <meta name="description" content="Strategic growth advisory that delivers measurable revenue results. Increase lead conversion by 25-35%, shorten sales cycles by 30-50%, and eliminate $300-800/month in platform fees." />
-  <meta name="keywords" content="strategic growth advisory, revenue optimization, sales performance, conversion rate optimization, platform independence, business growth consulting" />
+  <title>Entelech - Premier Growth Operations Consulting</title>
+  <meta name="description" content="Strategic growth advisory that delivers measurable revenue results for B2B service companies. Choose your industry for specialized solutions." />
+  <meta name="keywords" content="growth operations consulting, strategic advisory, B2B automation, business systems" />
   <meta name="author" content="Entelech" />
-  <meta property="og:title" content="Entelech - Premier AI-Enabled Growth Operations Consulting" />
-  <meta property="og:description" content="Transform your business operations with custom-branded applications that convert more and cost less." />
+  <meta property="og:title" content="Entelech - Premier Growth Operations Consulting" />
+  <meta property="og:description" content="Strategic growth advisory that delivers measurable revenue results." />
   <meta property="og:type" content="website" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://entelech.com" />
-  
+  <link rel="canonical" href="https://entelech.net" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -27,686 +27,476 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: #ffffff;
-      color: #1f2937;
-      line-height: 1.6;
+      background: #000000;
+      color: #ffffff;
       min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease-in-out infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Subtle particle effect */
+    .bg-animation::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+      animation: particleFloat 12s ease-in-out infinite;
+    }
+
+    @keyframes particleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
     }
 
     .container {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
     }
 
-    /* Header Section */
-    .header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    /* Logo Animation */
+    .logo-container {
+      margin-bottom: 60px;
+      animation: logoFadeIn 2s ease-out;
     }
-    
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 0;
+
+    @keyframes logoFadeIn {
+      0% { opacity: 0; transform: translateY(30px) scale(0.9); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
     }
 
     .logo-icon {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-      border-radius: 12px;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease;
       position: relative;
+      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
     }
 
     .logo-icon::after {
       content: 'E';
-      color: white;
-      font-size: 28px;
+      color: #000000;
+      font-size: 36px;
       font-weight: 800;
+      font-family: 'Inter', sans-serif;
     }
-    
+
     .logo-icon:hover {
-      transform: translateY(-3px) scale(1.05);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 48px rgba(255, 255, 255, 0.15);
     }
 
     .logo-text {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 800;
-      color: #1f2937;
-      letter-spacing: -0.5px;
-      transition: all 0.3s ease;
-    }
-    
-    .logo:hover .logo-text {
-      color: #111827;
-      transform: translateY(-2px);
+      color: #ffffff;
+      letter-spacing: -1px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
-    /* Mobile Menu Toggle */
-    .mobile-menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      padding: 8px;
-      background: none;
-      border: none;
-      z-index: 101;
-    }
-
-    .mobile-menu-toggle span {
-      width: 24px;
-      height: 2px;
-      background: #1f2937;
-      margin: 3px 0;
-      transition: all 0.3s ease;
-      transform-origin: center;
-    }
-
-    .mobile-menu-toggle.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .mobile-menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .mobile-menu-toggle.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
-    }
-
-    /* Navigation Menu */
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav-link {
-      color: #6b7280;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 15px;
-      transition: all 0.3s ease;
-      padding: 8px 0;
-      position: relative;
-    }
-
-    .nav-link:hover {
-      color: #1f2937;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #1f2937;
-      transition: width 0.3s ease;
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      background: #1f2937;
-      color: #ffffff !important;
-      padding: 8px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-
-    .nav-cta:hover {
-      background: #111827;
-      transform: translateY(-1px);
-    }
-
-    .nav-cta::after {
-      display: none;
-    }
-
-    /* Hero Section */
-    .hero {
+    /* Main Content */
+    .main-content {
       text-align: center;
-      padding: 64px 0;
-      border-bottom: 1px solid #e5e7eb;
-      margin-bottom: 64px;
+      animation: contentSlideIn 2.5s ease-out 0.5s both;
     }
 
-    .badge {
-      display: inline-block;
-      background: #f3f4f6;
-      border: 1px solid #d1d5db;
-      border-radius: 6px;
-      padding: 8px 16px;
-      margin-bottom: 24px;
+    @keyframes contentSlideIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
-    .badge-text {
-      color: #6b7280;
-      font-weight: 500;
-      font-size: 14px;
-    }
-
-    .attention-line {
+    .premier-text {
       font-size: 18px;
       font-weight: 500;
-      color: #6b7280;
+      color: #a1a1a1;
       margin-bottom: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: textGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes textGlow {
+      0%, 100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+      50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
     }
 
     .main-headline {
-      font-size: 48px;
+      font-size: 56px;
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.1;
       margin-bottom: 24px;
-      color: #111827;
-    }
-
-    .highlight-text {
-      color: #1f2937;
+      color: #ffffff;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
     }
 
     .sub-headline {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      line-height: 1.3;
-      color: #374151;
-    }
-
-    .sub-text {
-      font-size: 18px;
-      color: #6b7280;
-      font-weight: 400;
-      margin-bottom: 32px;
-      max-width: 800px;
+      font-size: 24px;
+      font-weight: 500;
+      color: #d1d1d1;
+      margin-bottom: 60px;
+      line-height: 1.4;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .section-subtitle {
+    .selection-prompt {
       font-size: 20px;
-      color: #6b7280;
-      margin-bottom: 32px;
-      font-weight: 500;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 40px;
+      animation: pulseGlow 2s ease-in-out infinite;
     }
 
-    /* CTA Button */
-    .cta-container {
-      display: inline-block;
-      margin: 32px 0;
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+
+    /* Industry Selection Cards */
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+      animation: cardsSlideUp 3s ease-out 1s both;
+    }
+
+    @keyframes cardsSlideUp {
+      0% { opacity: 0; transform: translateY(60px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .industry-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-decoration: none;
+      color: #ffffff;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      cursor: pointer;
     }
 
-    .cta-glow {
+    .industry-card::before {
+      content: '';
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle, rgba(31, 41, 55, 0.2) 0%, transparent 70%);
-      border-radius: 6px;
-      filter: blur(12px);
-      z-index: -1;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.6s;
     }
 
-    .cta-button {
-      background: #1f2937;
-      color: white;
-      border: 1px solid #1f2937;
-      padding: 16px 32px;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      transition: all 0.2s ease;
-      gap: 8px;
+    .industry-card:hover::before {
+      left: 100%;
     }
 
-    .cta-button:hover {
-      background: #111827;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(31, 41, 55, 0.2);
+    .industry-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 16px 64px rgba(0, 0, 0, 0.3);
     }
 
-    /* Trust Signals */
-    .trust-signals {
-      margin: 64px 0;
-      text-align: center;
-    }
-
-    .trust-title {
-      font-size: 24px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 32px;
-    }
-
-    .trust-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .trust-item {
+    .card-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 16px;
-      background: #f9fafb;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .trust-icon {
-      width: 20px;
-      height: 20px;
-      color: #10b981;
-      flex-shrink: 0;
-    }
-
-    .trust-item span {
-      font-weight: 500;
-      color: #374151;
-    }
-
-    /* Problem Section */
-    .problem-section {
-      margin: 64px 0;
-      text-align: center;
-    }
-
-    .section-title {
-      font-size: 36px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 16px;
-    }
-
-    .about-text {
-      text-align: left;
-      margin: 32px auto;
-      max-width: 800px;
-    }
-
-    .about-text p {
-      color: #6b7280;
-      margin-bottom: 16px;
-      line-height: 1.7;
-    }
-
-    /* Services Grid */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 32px;
-      margin: 48px 0;
-    }
-
-    .service-card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 32px;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 24px;
       transition: all 0.3s ease;
     }
 
-    .service-card:hover {
-      border-color: #d1d5db;
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    .agencies .card-icon {
+      background: linear-gradient(135deg, #dc2626, #991b1b);
     }
 
-    .service-card h3 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #111827;
+    .coaches .card-icon {
+      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    }
+
+    .developers .card-icon {
+      background: linear-gradient(135deg, #0891b2, #0e7490);
+    }
+
+    .industry-card:hover .card-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .card-subtitle {
+      font-size: 16px;
+      font-weight: 500;
+      color: #a1a1a1;
       margin-bottom: 16px;
     }
 
-    .service-card ul {
-      color: #6b7280;
-      line-height: 1.8;
-      margin: 0;
-      padding-left: 20px;
+    .card-description {
+      font-size: 14px;
+      color: #d1d1d1;
+      line-height: 1.5;
+      margin-bottom: 20px;
     }
 
-    .service-card ul li {
-      margin-bottom: 8px;
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      opacity: 0.8;
+      transition: all 0.3s ease;
     }
 
-    /* Niche Navigation Hover Effects */
-    .niche-card:hover {
-      border-color: #1f2937 !important;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(31, 41, 55, 0.15);
+    .industry-card:hover .card-cta {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    .card-cta::after {
+      content: '→';
+      font-size: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .industry-card:hover .card-cta::after {
+      transform: translateX(4px);
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .mobile-menu-toggle {
-        display: flex;
-      }
-
-      .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #ffffff;
-        border-top: 1px solid #e5e7eb;
-        flex-direction: column;
-        gap: 16px;
-        padding: 24px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .nav-menu.active {
-        display: flex;
-      }
-
       .main-headline {
-        font-size: 36px;
+        font-size: 40px;
       }
 
-      .hero {
-        padding: 48px 0;
+      .sub-headline {
+        font-size: 20px;
       }
 
-      .trust-items {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid {
+      .industry-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+      }
+
+      .industry-card {
+        padding: 32px 24px;
+      }
+
+      .logo-icon {
+        width: 64px;
+        height: 64px;
+      }
+
+      .logo-icon::after {
+        font-size: 28px;
+      }
+
+      .logo-text {
+        font-size: 24px;
+      }
+    }
+
+    /* Loading Animation */
+    .page-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeOut 1s ease-out 2s both;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .loader-spinner {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-left-color: #ffffff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <!-- Logo and Brand -->
-        <div class="logo">
-          <div class="logo-icon" alt="Entelech Logo"></div>
-          <span class="logo-text">Entelech</span>
-        </div>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        
-        <!-- Navigation Menu -->
-        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
-          <a href="/agencies" class="nav-link">For Agencies</a>
-          <a href="/coaches" class="nav-link">For Coaches</a>
-          <a href="/developers" class="nav-link">For Developers</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="https://calendly.com/joinentelech/discovery-call" class="nav-link nav-cta">Book Discovery Call</a>
-        </nav>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Animated Background -->
+  <div class="bg-animation"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-container">
+      <div class="logo">
+        <div class="logo-icon"></div>
+        <span class="logo-text">Entelech</span>
       </div>
     </div>
-  </header>
 
-  <!-- Main Content Container -->
-  <main class="container">
-    
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="premier-text">Premier Growth Operations</div>
       <h1 class="main-headline">
-        <span class="highlight-text">We Build Custom Business Systems</span><br>
-        for B2B Service Companies
+        Strategic Consulting Firm
       </h1>
-
-      <p class="section-subtitle" style="font-size: 20px; color: #6b7280; margin-bottom: 32px; font-weight: 500;">
-        Replace $300-800/month in SaaS subscriptions with revenue-generating systems that increase lead conversion by 25-35%.
+      <p class="sub-headline">
+        We build custom systems that deliver measurable revenue results for B2B service companies
       </p>
 
-      <!-- Niche Navigation -->
-      <div style="margin: 40px 0; background: #f8fafc; border-radius: 12px; padding: 32px; border: 1px solid #e2e8f0;">
-        <h3 style="font-size: 24px; font-weight: 600; color: #1f2937; margin-bottom: 24px; text-align: center;">Choose Your Industry:</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 24px;">
-          <a href="/agencies" class="niche-card" style="display: block; background: #ffffff; border: 2px solid #e5e7eb; border-radius: 8px; padding: 20px; text-decoration: none; transition: all 0.3s ease; text-align: center;">
-            <div style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">For Marketing Agencies</div>
-            <div style="font-size: 14px; color: #6b7280;">Client Onboarding Automation</div>
-          </a>
-          <a href="/coaches" class="niche-card" style="display: block; background: #ffffff; border: 2px solid #e5e7eb; border-radius: 8px; padding: 20px; text-decoration: none; transition: all 0.3s ease; text-align: center;">
-            <div style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">For Coaches & Consultants</div>
-            <div style="font-size: 14px; color: #6b7280;">Lead Nurturing & Follow-Up</div>
-          </a>
-          <a href="/developers" class="niche-card" style="display: block; background: #ffffff; border: 2px solid #e5e7eb; border-radius: 8px; padding: 20px; text-decoration: none; transition: all 0.3s ease; text-align: center;">
-            <div style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">For Software Developers</div>
-            <div style="font-size: 14px; color: #6b7280;">Proposal Generation Systems</div>
-          </a>
-        </div>
+      <div class="selection-prompt">
+        Select Your Industry:
       </div>
 
-      <p class="sub-text">
-        We're not another tech vendor - we're strategic growth consultants who analyze your business first, then design custom solutions. Every recommendation is based on proven methodologies that measurably improve your sales performance and operational efficiency.
-      </p>
-      
-      <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin: 24px auto; max-width: 600px;">
-        <p style="color: #1e40af; font-weight: 500; margin: 0; font-size: 16px; text-align: center;">
-          ✓ No monthly system access fees<span style="color: #6b7280; font-weight: 400;"> (unlike agencies charging $750-1,750/month)</span><br>
-          ✓ Complete ownership from day one<span style="color: #6b7280; font-weight: 400;"> (no vendor lock-in)</span>
-        </p>
-      </div>
-      
-      <!-- Enhanced CTA Button -->
-      <div class="cta-container">
-        <div class="cta-glow"></div>
-        <a href="https://calendly.com/joinentelech/discovery-call" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Schedule consultation call via Calendly">
-          SCHEDULE CONSULTATION
+      <!-- Industry Selection -->
+      <div class="industry-grid">
+        <a href="/agencies.html" class="industry-card agencies">
+          <div class="card-icon">🏢</div>
+          <div class="card-title">Marketing Agencies</div>
+          <div class="card-subtitle">Client Onboarding Systems</div>
+          <div class="card-description">
+            Professional onboarding that increases client lifetime value by 30% and reduces churn by 25%
+          </div>
+          <div class="card-cta">Discover Agency Solutions</div>
+        </a>
+
+        <a href="/coaches.html" class="industry-card coaches">
+          <div class="card-icon">💡</div>
+          <div class="card-title">Business Coaches</div>
+          <div class="card-subtitle">Lead Nurturing Automation</div>
+          <div class="card-description">
+            Automated systems that turn 47% more leads into paying clients through strategic follow-up
+          </div>
+          <div class="card-cta">Explore Coaching Systems</div>
+        </a>
+
+        <a href="/developers.html" class="industry-card developers">
+          <div class="card-icon">⚡</div>
+          <div class="card-title">Software Developers</div>
+          <div class="card-subtitle">Proposal Speed Systems</div>
+          <div class="card-description">
+            Lightning-fast proposal generation that wins 35% more deals through competitive response speed
+          </div>
+          <div class="card-cta">View Developer Solutions</div>
         </a>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Trust Signals -->
-    <section class="trust-signals" role="complementary" aria-label="Trust and credibility indicators">
-      <div class="container">
-        <h2 class="trust-title">Measurable Outcomes We Deliver</h2>
-        <div class="trust-items">
-          <div class="trust-item">
-            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-            </svg>
-            <span>25-35% Higher Lead Conversion</span>
-          </div>
-          <div class="trust-item">
-            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.53 10.5a.75.75 0 00-1.06 1.061l1.5 1.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-            </svg>
-            <span>$300-800/Month Platform Savings</span>
-          </div>
-          <div class="trust-item">
-            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm3.707 6.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-            </svg>
-            <span>15-25 Hours/Week Time Savings</span>
-          </div>
-          <div class="trust-item">
-            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M1 6a3 3 0 013-3h12a3 3 0 013 3v8a3 3 0 01-3 3H4a3 3 0 01-3-3V6zm4 2a1 1 0 000 2h10a1 1 0 100-2H5z" clip-rule="evenodd" />
-            </svg>
-            <span>30-50% Faster Sales Cycles</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="problem-section">
-      <h2 class="section-title">Strategic Consulting + Custom Solutions = Measurable Growth</h2>
-      <p class="section-subtitle">We analyze your business operations first, identify strategic opportunities, then build custom solutions that deliver measurable revenue results.</p>
-      
-      <div class="about-text" style="text-align: center; margin: 32px auto; max-width: 800px;">
-        <p><strong>The Problem:</strong> Service businesses spend $300-800+ monthly on TypeForm, Calendly, PandaDoc, and other platforms that display their branding to your prospects. Your sales processes are limited by generic tools that don't reflect your business's professionalism or capture the data you actually need.</p>
-        <br>
-        <p><strong>The Impact:</strong> Leads convert at lower rates because generic forms don't build trust. Sales cycles drag because manual processes create delays. Average contract values remain flat because your presentation lacks premium positioning.</p>
-      </div>
-
-      <!-- Ownership-Focused Value Proposition -->
-      <div class="ownership-section" style="background: #f9fafb; border-radius: 16px; padding: 48px; margin: 48px 0; border: 1px solid #e5e7eb;">
-        <h3 style="font-size: 28px; font-weight: 700; color: #111827; margin-bottom: 24px; text-align: center;">Complete Ownership From Day One</h3>
-        <p style="font-size: 18px; color: #6b7280; text-align: center; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">No vendor lock-in. No hostage situations. Your infrastructure, your data, your success.</p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 32px;">
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-              <svg style="width: 30px; height: 30px; color: white;" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
-              </svg>
-            </div>
-            <h4 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 12px;">Own Your Systems</h4>
-            <p style="color: #6b7280; line-height: 1.6;">Full source code ownership, hosted on your infrastructure. No proprietary dependencies or platform rental fees.</p>
-          </div>
-          
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-              <svg style="width: 30px; height: 30px; color: white;" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
-              </svg>
-            </div>
-            <h4 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 12px;">Strategic Partnership</h4>
-            <p style="color: #6b7280; line-height: 1.6;">We analyze your business first, design custom solutions, then transfer complete ownership. Consulting-led, not vendor-dependent.</p>
-          </div>
-          
-          <div style="text-align: center;">
-            <div style="width: 60px; height: 60px; background: #8b5cf6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-              <svg style="width: 30px; height: 30px; color: white;" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
-              </svg>
-            </div>
-            <h4 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 12px;">Transparent Costs</h4>
-            <p style="color: #6b7280; line-height: 1.6;">Optional maintenance only covers actual hosting and updates ($200-350/month). No system access fees or proprietary licensing.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Approach Overview -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; margin: 48px 0;">
-        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px;">
-          <h3 style="font-size: 24px; font-weight: 600; color: #111827; margin-bottom: 16px;">Revenue Growth Systems</h3>
-          <p style="color: #6b7280; margin-bottom: 20px;">Strategic proposal methodology + custom automation that wins more business and accelerates sales cycles.</p>
-          <div style="color: #10b981; font-weight: 600; margin-bottom: 12px;">Measurable Outcomes:</div>
-          <ul style="color: #6b7280; line-height: 1.8; margin: 0; padding-left: 20px;">
-            <li>25-35% higher conversion rates</li>
-            <li>30-50% faster sales cycles</li>
-            <li>15-25% increase in win rates</li>
-            <li>Save $300-800/month in platform fees</li>
-          </ul>
-        </div>
-
-        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px;">
-          <h3 style="font-size: 24px; font-weight: 600; color: #111827; margin-bottom: 16px;">Client Experience Strategy</h3>
-          <p style="color: #6b7280; margin-bottom: 20px;">Premium service delivery framework + custom portals that increase client lifetime value and reduce operational overhead.</p>
-          <div style="color: #10b981; font-weight: 600; margin-bottom: 12px;">Measurable Outcomes:</div>
-          <ul style="color: #6b7280; line-height: 1.8; margin: 0; padding-left: 20px;">
-            <li>35-50% increase in client LTV</li>
-            <li>50-70% faster onboarding</li>
-            <li>60-80% reduction in payment delays</li>
-            <li>Eliminate admin staff needs</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cta-container" style="margin: 48px 0;">
-        <a href="https://calendly.com/joinentelech/discovery-call" target="_blank" rel="noopener noreferrer" class="cta-button" style="font-size: 18px; padding: 16px 32px;">
-          SCHEDULE CONSULTATION
-        </a>
-      </div>
-    </section>
-
-    <!-- Case Study Section -->
-    <section class="problem-section" id="testimonials">
-      <h2 class="section-title">Case Study: Transportation Company Transformation</h2>
-      <div class="problem-grid" style="margin-top: 48px;">
-        <div class="problem-card" style="padding: 32px; text-align: left; background: #f9fafb; border-radius: 12px; border: 1px solid #e5e7eb;">
-          <p class="problem-description" style="font-style: italic; margin-bottom: 20px; font-size: 18px; color: #6b7280;">"Entelech streamlined our entire booking and dispatch system. We went from manual coordination to automated workflows that scale with our growth. Game changer for our operations."</p>
-          <p style="color: #1f2937; font-weight: 600;">- TNT Limousine Services</p>
-        </div>
-      </div>
-
-      <!-- FAQ Section -->
-      <div style="margin: 64px 0; background: #ffffff; border-radius: 16px; padding: 48px; border: 1px solid #e5e7eb;">
-        <h3 style="font-size: 28px; font-weight: 700; color: #111827; margin-bottom: 32px; text-align: center;">Investment in Your Business, Not Rental of Our Systems</h3>
-        
-        <div style="max-width: 800px; margin: 0 auto;">
-          <div style="margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #e5e7eb;">
-            <h4 style="font-size: 18px; font-weight: 600; color: #111827; margin-bottom: 12px;">Do you charge monthly system access fees?</h4>
-            <p style="color: #6b7280; line-height: 1.7;">No. Unlike other agencies that charge $750-1,750/month for system access, we transfer complete ownership to you. Optional maintenance ($200-350/month) only covers actual hosting costs and technical updates - not proprietary system rental.</p>
-          </div>
-          
-          <div style="margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #e5e7eb;">
-            <h4 style="font-size: 18px; font-weight: 600; color: #111827; margin-bottom: 12px;">What happens if we stop working together?</h4>
-            <p style="color: #6b7280; line-height: 1.7;">You keep everything. Full source code, hosting infrastructure, and system access. No vendor lock-in or hostage situations. Your investment in custom systems remains an asset to your business permanently.</p>
-          </div>
-          
-          <div style="margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #e5e7eb;">
-            <h4 style="font-size: 18px; font-weight: 600; color: #111827; margin-bottom: 12px;">How is this different from other automation agencies?</h4>
-            <p style="color: #6b7280; line-height: 1.7;">Most agencies create dependency through proprietary platforms and monthly licensing fees. We're strategic consultants who analyze your business first, design custom solutions, then transfer complete ownership. Enterprise capabilities without enterprise dependency.</p>
-          </div>
-          
-          <div>
-            <h4 style="font-size: 18px; font-weight: 600; color: #111827; margin-bottom: 12px;">What's included in the optional maintenance?</h4>
-            <p style="color: #6b7280; line-height: 1.7;">Only actual operational costs: server hosting, security updates, backup management, and technical support. No system access fees, no per-user licensing, no proprietary platform charges. Complete cost transparency.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-container">
-        <a href="https://calendly.com/joinentelech/discovery-call" target="_blank" rel="noopener noreferrer" class="cta-button">
-          SCHEDULE CONSULTATION
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Mobile Menu Script -->
   <script>
+    // Add smooth scrolling and enhanced interactions
     document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      
-      if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-          mobileMenuToggle.classList.toggle('active');
-          navMenu.classList.toggle('active');
-          
-          const isExpanded = navMenu.classList.contains('active');
-          mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+      // Staggered card animations
+      const cards = document.querySelectorAll('.industry-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${1.5 + (index * 0.2)}s`;
+      });
+
+      // Add click analytics (optional)
+      cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+          const industry = this.classList[1];
+          // You can add analytics tracking here
+          console.log(`User selected: ${industry}`);
         });
-      }
+      });
+
+      // Add keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        const cards = [...document.querySelectorAll('.industry-card')];
+        const focusedIndex = cards.findIndex(card => document.activeElement === card);
+
+        if (e.key === 'ArrowRight' && focusedIndex < cards.length - 1) {
+          cards[focusedIndex + 1].focus();
+        } else if (e.key === 'ArrowLeft' && focusedIndex > 0) {
+          cards[focusedIndex - 1].focus();
+        } else if (e.key === 'Enter' && focusedIndex >= 0) {
+          cards[focusedIndex].click();
+        }
+      });
+
+      // Make cards focusable for keyboard navigation
+      cards.forEach(card => {
+        card.setAttribute('tabindex', '0');
+      });
     });
   </script>
 </body>

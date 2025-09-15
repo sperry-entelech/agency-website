@@ -13,6 +13,32 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://entelech.net/coaches" />
 
+  <!-- Return to Intro Button -->
+  <style>
+    .back-to-intro {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: rgba(31, 41, 55, 0.9);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .back-to-intro:hover {
+      background: rgba(31, 41, 55, 1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 41, 55, 0.3);
+    }
+  </style>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -418,6 +444,9 @@
 </head>
 
 <body>
+  <!-- Return to Intro Button -->
+  <a href="/index.html" class="back-to-intro">← Back to Industries</a>
+
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -430,9 +459,9 @@
 
         <!-- Navigation Menu -->
         <nav class="nav-menu" role="navigation" aria-label="Main navigation">
-          <a href="/agencies" class="nav-link">For Agencies</a>
-          <a href="/coaches" class="nav-link">For Coaches</a>
-          <a href="/developers" class="nav-link">For Developers</a>
+          <a href="/agencies.html" class="nav-link">For Agencies</a>
+          <a href="/coaches.html" class="nav-link">For Coaches</a>
+          <a href="/developers.html" class="nav-link">For Developers</a>
           <a href="/#about" class="nav-link">About</a>
           <a href="https://calendly.com/joinentelech/coach-discovery" class="nav-link nav-cta">Book Discovery Call</a>
         </nav>
@@ -451,7 +480,7 @@
       </h1>
 
       <p class="sub-headline">
-        Coaches lose 60% of interested prospects to poor follow-up. We build systems that nurture leads automatically while you focus on delivering results.
+        Coaches lose 53% of interested prospects to poor follow-up. We build systems that nurture leads automatically while you focus on delivering results.
       </p>
 
       <p class="sub-text">
@@ -471,7 +500,7 @@
     <!-- Pain Points Section -->
     <section class="problem-section">
       <h2 class="section-title" style="text-align: center;">Why Great Leads Go Cold</h2>
-      <p class="section-subtitle" style="text-align: center;">60% of interested prospects never become clients due to inconsistent follow-up</p>
+      <p class="section-subtitle" style="text-align: center;">53% of interested prospects never become clients due to inconsistent follow-up</p>
 
       <div class="pain-points">
         <div class="pain-point">
@@ -497,7 +526,7 @@
     <section class="solution-features">
       <h2 class="section-title" style="text-align: center; color: #6b46c1;">Lead Nurturing & Follow-Up Automation</h2>
       <p style="text-align: center; font-size: 18px; color: #553c9a; margin-bottom: 32px;">
-        Increase lead-to-client conversion by 40% with automated nurturing sequences
+        Increase lead-to-client conversion by 47% with automated nurturing sequences
       </p>
 
       <div class="features-grid">
@@ -558,28 +587,114 @@
       </div>
     </section>
 
-    <!-- ROI Calculator -->
-    <section class="roi-calculator">
-      <h3 style="font-size: 28px; font-weight: 700; color: #1f2937; margin-bottom: 24px;">Calculate Your ROI</h3>
-      <div style="max-width: 600px; margin: 0 auto;">
-        <p style="font-size: 18px; color: #6b7280; margin-bottom: 24px;">
-          If you get 20 leads per month and charge $3,000 for coaching:
-        </p>
-        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; margin: 24px 0;">
-          <div style="font-size: 24px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">
-            Current: 2 new clients/month = $6,000
+    <!-- 6-Phase Process -->
+    <section class="problem-section">
+      <h2 class="section-title" style="text-align: center;">Our 6-Phase Delivery Process</h2>
+      <p class="section-subtitle" style="text-align: center;">Strategic consulting approach that ensures measurable results</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; margin: 48px 0;">
+
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px;">
+          <div style="display: flex; align-items: center; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #7c3aed; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 16px;">1</div>
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827;">Lead Flow Analysis</h4>
           </div>
-          <div style="color: #6b7280;">
-            20 leads × 10% conversion = 2 clients × $3,000
+          <p style="color: #6b7280; line-height: 1.6;">
+            Map your current lead sources, analyze conversion rates at each stage, and identify where prospects drop off in your nurturing process.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px;">
+          <div style="display: flex; align-items: center; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #7c3aed; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 16px;">2</div>
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827;">Content Strategy Design</h4>
+          </div>
+          <p style="color: #6b7280; line-height: 1.6;">
+            Develop value-first nurturing sequences that build trust, demonstrate expertise, and guide prospects toward booking discovery calls.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px;">
+          <div style="display: flex; align-items: center; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #7c3aed; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 16px;">3</div>
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827;">Automation Development</h4>
+          </div>
+          <p style="color: #6b7280; line-height: 1.6;">
+            Build behavioral-triggered nurturing sequences with engagement tracking, discovery call automation, and seamless CRM integration.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px;">
+          <div style="display: flex; align-items: center; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #7c3aed; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 16px;">4</div>
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827;">Content Creation</h4>
+          </div>
+          <p style="color: #6b7280; line-height: 1.6;">
+            Create compelling email sequences, lead magnets, and value-driven content that positions you as the go-to expert in your coaching niche.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px;">
+          <div style="display: flex; align-items: center; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #7c3aed; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 16px;">5</div>
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827;">Launch & Integration</h4>
+          </div>
+          <p style="color: #6b7280; line-height: 1.6;">
+            Seamless integration with your existing lead sources, testing all nurturing sequences, and training on system management and optimization.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px;">
+          <div style="display: flex; align-items: center; margin-bottom: 16px;">
+            <div style="width: 40px; height: 40px; background: #7c3aed; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 16px;">6</div>
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827;">Optimize & Scale</h4>
+          </div>
+          <p style="color: #6b7280; line-height: 1.6;">
+            Continuous optimization based on conversion data, A/B testing content variations, and scaling automation as your coaching business grows.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Growth Standards -->
+    <section class="roi-calculator">
+      <h3 style="font-size: 28px; font-weight: 700; color: #1f2937; margin-bottom: 24px;">Our Growth Standards</h3>
+      <div style="max-width: 700px; margin: 0 auto;">
+        <p style="font-size: 18px; color: #6b7280; margin-bottom: 32px;">
+          These are the measurable outcomes we deliver through lead nurturing automation
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 32px 0;">
+          <div style="background: #f5f3ff; border: 1px solid #e9d5ff; border-radius: 12px; padding: 24px; text-align: center;">
+            <div style="font-size: 32px; font-weight: 700; color: #7c3aed; margin-bottom: 8px;">47%</div>
+            <div style="font-size: 16px; font-weight: 600; color: #553c9a;">Increase in Lead-to-Client Conversion</div>
+            <div style="color: #7c3aed; font-size: 14px; margin-top: 8px;">Systematic nurturing sequences</div>
+          </div>
+
+          <div style="background: #f5f3ff; border: 1px solid #e9d5ff; border-radius: 12px; padding: 24px; text-align: center;">
+            <div style="font-size: 32px; font-weight: 700; color: #7c3aed; margin-bottom: 8px;">80%</div>
+            <div style="font-size: 16px; font-weight: 600; color: #553c9a;">Follow-Up Communication Automated</div>
+            <div style="color: #7c3aed; font-size: 14px; margin-top: 8px;">Consistent prospect engagement</div>
+          </div>
+
+          <div style="background: #f5f3ff; border: 1px solid #e9d5ff; border-radius: 12px; padding: 24px; text-align: center;">
+            <div style="font-size: 32px; font-weight: 700; color: #7c3aed; margin-bottom: 8px;">2x</div>
+            <div style="font-size: 16px; font-weight: 600; color: #553c9a;">More Discovery Calls Booked</div>
+            <div style="color: #7c3aed; font-size: 14px; margin-top: 8px;">Strategic nurturing approach</div>
+          </div>
+
+          <div style="background: #f5f3ff; border: 1px solid #e9d5ff; border-radius: 12px; padding: 24px; text-align: center;">
+            <div style="font-size: 32px; font-weight: 700; color: #7c3aed; margin-bottom: 8px;">Scalable</div>
+            <div style="font-size: 16px; font-weight: 600; color: #553c9a;">Business Growth</div>
+            <div style="color: #7c3aed; font-size: 14px; margin-top: 8px;">Without constant manual outreach</div>
           </div>
         </div>
-        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px;">
-          <div style="font-size: 24px; font-weight: 600; color: #7c3aed; margin-bottom: 8px;">
-            With Automation: 3 clients/month = $9,000
-          </div>
-          <div style="color: #6b7280;">
-            40% improvement = +$3,000 monthly revenue
-          </div>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin: 32px 0; text-align: center;">
+          <p style="color: #374151; font-size: 16px; line-height: 1.6;">
+            <strong>Our Standard:</strong> Behavioral-triggered nurturing systems that build trust over time, resulting in higher-quality prospects who are ready to invest in coaching.
+          </p>
         </div>
       </div>
     </section>
@@ -603,19 +718,19 @@
 
     <!-- Investment -->
     <section class="problem-section" style="text-align: center;">
-      <h2 class="section-title">Investment</h2>
+      <h2 class="section-title">Strategic Investment</h2>
       <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 48px; max-width: 600px; margin: 32px auto;">
         <div style="font-size: 32px; font-weight: 700; color: #1f2937; margin-bottom: 16px;">
           $3,000 + $900/month
         </div>
         <div style="color: #6b7280; margin-bottom: 24px; line-height: 1.6;">
-          One-time setup includes custom nurturing system, behavioral automation, and complete ownership transfer.<br><br>
-          Optional maintenance covers hosting, updates, and support.
+          One-time build includes custom nurturing system and complete ownership transfer.<br><br>
+          Monthly consulting retainer covers strategic optimization and system iteration.
         </div>
         <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 16px; margin: 24px 0;">
           <p style="color: #1e40af; font-weight: 500; margin: 0;">
             ✓ Complete ownership from day one<br>
-            ✓ No vendor lock-in or system access fees<br>
+            ✓ Strategic coaching business consulting included<br>
             ✓ Custom domain: nurture.yourcoaching.com
           </p>
         </div>
