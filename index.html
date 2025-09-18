@@ -3,20 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entelech - Premier Growth Operations Consulting</title>
-  <meta name="description" content="Strategic growth advisory that delivers measurable revenue results for B2B service companies. Choose your industry for specialized solutions." />
-  <meta name="keywords" content="growth operations consulting, strategic advisory, B2B automation, business systems" />
-  <meta name="author" content="Entelech" />
-  <meta property="og:title" content="Entelech - Premier Growth Operations Consulting" />
-  <meta property="og:description" content="Strategic growth advisory that delivers measurable revenue results." />
-  <meta property="og:type" content="website" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://entelech.net" />
-
-  <!-- Fonts -->
+  <title>Entelech - Revenue Acceleration Partnerships</title>
+  <meta name="description" content="Premium revenue acceleration partnerships for service businesses. Systematic client acquisition, retention, and growth through custom automation and strategic consulting." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -27,238 +18,183 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: #efefef;
-      color: #1f2937;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
       min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* Animated Background */
-    .bg-animation {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      background: linear-gradient(135deg, #efefef 0%, #e5e5e5 50%, #efefef 100%);
-      background-size: 400% 400%;
-      animation: gradientShift 8s ease-in-out infinite;
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Subtle particle effect */
-    .bg-animation::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(circle at 20% 50%, rgba(31, 41, 55, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(31, 41, 55, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(31, 41, 55, 0.04) 0%, transparent 50%);
-      animation: particleFloat 12s ease-in-out infinite;
-    }
-
-    @keyframes particleFloat {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
     }
 
     .container {
-      position: relative;
-      z-index: 10;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
+      padding: 0 24px;
     }
 
-    /* Logo Animation */
-    .logo-container {
-      margin-bottom: 60px;
-      animation: logoFadeIn 2s ease-out;
+    /* Header */
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    @keyframes logoFadeIn {
-      0% { opacity: 0; transform: translateY(30px) scale(0.9); }
-      100% { opacity: 1; transform: translateY(0) scale(1); }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
     }
 
     .logo {
       display: flex;
       align-items: center;
       gap: 16px;
+      text-decoration: none;
+      color: #1a1a1a;
     }
 
     .logo-icon {
-      width: 80px;
-      height: 80px;
-      background: #efefef;
-      border-radius: 16px;
+      width: 48px;
+      height: 48px;
+      background: #1a1a1a;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.3s ease;
-      position: relative;
-      box-shadow: 0 8px 32px rgba(31, 41, 55, 0.1);
     }
 
     .logo-icon::after {
       content: '';
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01MCA1Yy0yNSAwLTQ1IDIwLTQ1IDQ1czIwIDQ1IDQ1IDQ1IDQ1LTIwIDQ1LTQ1Uzc1IDUgNTAgNXptMCA3YzIxIDAgMzggMTcgMzggMzhzLTE3IDM4LTM4IDM4LTM4LTE3LTM4LTM4UzI5IDEyIDUwIDEyem0wIDdjLTE3IDAtMzEgMTQtMzEgMzFzMTQgMzEgMzEgMzEgMzEtMTQgMzEtMzFTNjcgMTkgNTAgMTl6bTAgN2MxMyAwIDI0IDExIDI0IDI0cy0xMSAyNC0yNCAyNC0yNC0xMS0yNC0yNFMzNyAyNiA1MCAyNnptMCA3Yy05IDAtMTcgOC0xNyAxN3M4IDE3IDE3IDE3IDE3LTggMTctMTdTNTkgMzMgNTAgMzN6bTAgN2M2IDAgMTEgNSAxMSAxMXMtNSAxMS0xMSAxMS0xMS01LTExLTExUzQ0IDQwIDUwIDQwem0wIDdjLTIgMC00IDItNCA0czIgNCA0IDQgNC0yIDQtNFM1MiA0NyA1MCA0N3oiIGZpbGw9IiMxZjI5MzciLz4KPHN2Zz4K');
+      width: 28px;
+      height: 28px;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0IDNDNy45IDMgMyA3LjkgMyAxNHM0LjkgMTEgMTEgMTEgMTEtNC45IDExLTExUzIwLjEgMyAxNCAzem0wIDJjNSAwIDkgNCA5IDlzLTQgOS05IDktOS00LTktOVM5IDEwIDE0IDV6bTAgMmMtMy45IDAtNyAzLjEtNyA3czMuMSA3IDcgNyA3LTMuMSA3LTdTMTcuOSA3IDE0IDd6bTAgMmMyLjggMCA1IDIuMiA1IDVzLTIuMiA1LTUgNS01LTIuMi01LTVTMTEuMiA5IDE0IDl6IiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPgo=');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
     }
 
-    .logo-icon:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 12px 48px rgba(31, 41, 55, 0.15);
-    }
-
     .logo-text {
-      font-size: 32px;
-      font-weight: 800;
-      color: #1f2937;
-      letter-spacing: -1px;
-      text-shadow: 0 2px 8px rgba(31, 41, 55, 0.3);
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
     }
 
-    /* Main Content */
-    .main-content {
+    .nav-cta {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: #000000;
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 120px 0 80px;
       text-align: center;
-      animation: contentSlideIn 2.5s ease-out 0.5s both;
     }
 
-    @keyframes contentSlideIn {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .premier-text {
-      font-size: 18px;
-      font-weight: 500;
-      color: #6b7280;
-      margin-bottom: 16px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      animation: textGlow 3s ease-in-out infinite;
-    }
-
-    @keyframes textGlow {
-      0%, 100% { text-shadow: 0 0 10px rgba(31, 41, 55, 0.3); }
-      50% { text-shadow: 0 0 20px rgba(31, 41, 55, 0.5); }
-    }
-
-    .main-headline {
-      font-size: 56px;
+    .hero-headline {
+      font-size: 64px;
       font-weight: 700;
       line-height: 1.1;
       margin-bottom: 24px;
-      color: #1f2937;
-      text-shadow: 0 4px 16px rgba(31, 41, 55, 0.3);
+      color: #1a1a1a;
+      letter-spacing: -1px;
     }
 
-    .sub-headline {
+    .hero-subhead {
       font-size: 24px;
-      font-weight: 500;
       color: #6b7280;
-      margin-bottom: 60px;
-      line-height: 1.4;
+      margin-bottom: 48px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+    }
+
+    /* Partnership Selection */
+    .partnerships-section {
+      padding: 80px 0;
+      background: #f9fafb;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 20px;
+      color: #6b7280;
+      margin-bottom: 64px;
+      text-align: center;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .selection-prompt {
-      font-size: 20px;
-      font-weight: 600;
-      color: #1f2937;
-      margin-bottom: 40px;
-      animation: pulseGlow 2s ease-in-out infinite;
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 1; }
-    }
-
-    /* Industry Selection Cards */
-    .industry-grid {
+    .partnerships-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       gap: 32px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
-      animation: cardsSlideUp 3s ease-out 1s both;
     }
 
-    @keyframes cardsSlideUp {
-      0% { opacity: 0; transform: translateY(60px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .industry-card {
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid rgba(31, 41, 55, 0.15);
+    .partnership-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
       border-radius: 16px;
-      padding: 40px 32px;
+      padding: 40px;
       text-decoration: none;
-      color: #1f2937;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      color: inherit;
+      transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
-      backdrop-filter: blur(10px);
-      cursor: pointer;
     }
 
-    .industry-card::before {
+    .partnership-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(31, 41, 55, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
       transition: left 0.6s;
     }
 
-    .industry-card:hover::before {
+    .partnership-card:hover::before {
       left: 100%;
     }
 
-    .industry-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      border-color: rgba(31, 41, 55, 0.3);
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 16px 64px rgba(31, 41, 55, 0.2);
+    .partnership-card:hover {
+      transform: translateY(-4px);
+      border-color: #d1d5db;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
     .card-icon {
       width: 64px;
       height: 64px;
-      margin: 0 auto 24px;
+      background: #1a1a1a;
       border-radius: 12px;
+      margin-bottom: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 32px;
-      margin-bottom: 24px;
-      transition: all 0.3s ease;
     }
 
     .agencies .card-icon {
@@ -273,15 +209,19 @@
       background: linear-gradient(135deg, #0891b2, #0e7490);
     }
 
-    .industry-card:hover .card-icon {
-      transform: scale(1.1) rotate(5deg);
+    .card-icon::after {
+      content: '';
+      width: 32px;
+      height: 32px;
+      background: #ffffff;
+      border-radius: 4px;
     }
 
     .card-title {
       font-size: 24px;
       font-weight: 700;
-      margin-bottom: 12px;
-      color: #1f2937;
+      color: #1a1a1a;
+      margin-bottom: 8px;
     }
 
     .card-subtitle {
@@ -292,10 +232,28 @@
     }
 
     .card-description {
-      font-size: 14px;
+      font-size: 15px;
       color: #374151;
-      line-height: 1.5;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .card-pricing {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 20px;
+    }
+
+    .setup-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .monthly-price {
+      font-size: 16px;
+      color: #6b7280;
     }
 
     .card-cta {
@@ -304,12 +262,12 @@
       gap: 8px;
       font-size: 14px;
       font-weight: 600;
-      color: #1f2937;
+      color: #1a1a1a;
       opacity: 0.8;
       transition: all 0.3s ease;
     }
 
-    .industry-card:hover .card-cta {
+    .partnership-card:hover .card-cta {
       opacity: 1;
       transform: translateX(4px);
     }
@@ -320,189 +278,218 @@
       transition: transform 0.3s ease;
     }
 
-    .industry-card:hover .card-cta::after {
+    .partnership-card:hover .card-cta::after {
       transform: translateX(4px);
     }
 
-    /* Responsive Design */
+    /* Stats Section */
+    .stats-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 48px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      background: #1a1a1a;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 20px;
+      color: #d1d5db;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background: #ffffff;
+      color: #1a1a1a;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: #f3f4f6;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      .main-headline {
-        font-size: 40px;
+      .hero-headline {
+        font-size: 48px;
       }
 
-      .sub-headline {
-        font-size: 20px;
-      }
-
-      .industry-grid {
+      .partnerships-grid {
         grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
         gap: 24px;
       }
 
-      .industry-card {
+      .partnership-card {
         padding: 32px 24px;
       }
 
-      .logo-icon {
-        width: 64px;
-        height: 64px;
-      }
-
-      .logo-icon::after {
-        font-size: 28px;
-      }
-
-      .logo-text {
-        font-size: 24px;
-      }
-    }
-
-    /* Loading Animation */
-    .page-loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #efefef;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: fadeOut 1s ease-out 2s both;
-    }
-
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-
-    .loader-spinner {
-      width: 40px;
-      height: 40px;
-      border: 2px solid rgba(31, 41, 55, 0.1);
-      border-left-color: #1f2937;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
+      .container {
+        padding: 0 16px;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- Page Loader -->
-  <div class="page-loader">
-    <div class="loader-spinner"></div>
-  </div>
-
-  <!-- Animated Background -->
-  <div class="bg-animation"></div>
-
-  <!-- Main Content -->
-  <div class="container">
-    <!-- Logo -->
-    <div class="logo-container">
-      <div class="logo">
-        <div class="logo-icon"></div>
-        <span class="logo-text">Entelech</span>
-      </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-      <div class="premier-text">The Premier</div>
-      <h1 class="main-headline">
-        Growth Operations Consulting Firm
-      </h1>
-      <p class="sub-headline">
-        We build custom systems that deliver measurable revenue results for B2B service companies — or you don't pay
-      </p>
-
-      <div class="selection-prompt">
-        Who We Serve Most:
-      </div>
-
-      <!-- Industry Selection -->
-      <div class="industry-grid">
-        <a href="/agencies.html" class="industry-card agencies">
-          <div class="card-icon">📊</div>
-          <div class="card-title">Marketing Agencies</div>
-          <div class="card-subtitle">Client Onboarding Systems</div>
-          <div class="card-description">
-            Professional onboarding that increases client lifetime value by 30% and reduces churn by 25%
-          </div>
-          <div class="card-cta">Discover Agency Solutions</div>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <div class="logo-icon"></div>
+          <span class="logo-text">Entelech</span>
         </a>
-
-        <a href="/coaches.html" class="industry-card coaches">
-          <div class="card-icon">🎯</div>
-          <div class="card-title">Business Coaches</div>
-          <div class="card-subtitle">Lead Nurturing Automation</div>
-          <div class="card-description">
-            Automated systems that turn 47% more leads into paying clients through strategic follow-up
-          </div>
-          <div class="card-cta">Explore Coaching Systems</div>
-        </a>
-
-        <a href="/developers.html" class="industry-card developers">
-          <div class="card-icon">⚡</div>
-          <div class="card-title">Software Developers</div>
-          <div class="card-subtitle">Proposal Speed Systems</div>
-          <div class="card-description">
-            Lightning-fast proposal generation that wins 35% more deals through competitive response speed
-          </div>
-          <div class="card-cta">View Developer Solutions</div>
+        <a href="https://calendly.com/joinentelech/discovery" class="nav-cta">
+          Book Discovery Call
         </a>
       </div>
     </div>
-  </div>
+  </header>
 
-  <script>
-    // Add smooth scrolling and enhanced interactions
-    document.addEventListener('DOMContentLoaded', function() {
-      // Staggered card animations
-      const cards = document.querySelectorAll('.industry-card');
-      cards.forEach((card, index) => {
-        card.style.animationDelay = `${1.5 + (index * 0.2)}s`;
-      });
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-headline">
+          Revenue Acceleration Partnerships
+        </h1>
+        <p class="hero-subhead">
+          Systematic client acquisition, retention, and growth for service businesses through custom automation and strategic consulting
+        </p>
+      </div>
+    </section>
 
-      // Add click analytics (optional)
-      cards.forEach(card => {
-        card.addEventListener('click', function(e) {
-          const industry = this.classList[1];
-          // You can add analytics tracking here
-          console.log(`User selected: ${industry}`);
-        });
-      });
+    <!-- Partnership Selection -->
+    <section class="partnerships-section">
+      <div class="container">
+        <h2 class="section-title">Choose Your Partnership</h2>
+        <p class="section-subtitle">
+          Select the revenue acceleration partnership designed for your industry
+        </p>
 
-      // Add keyboard navigation
-      document.addEventListener('keydown', function(e) {
-        const cards = [...document.querySelectorAll('.industry-card')];
-        const focusedIndex = cards.findIndex(card => document.activeElement === card);
+        <div class="partnerships-grid">
+          <a href="https://agencies.entelech.net" class="partnership-card agencies">
+            <div class="card-icon"></div>
+            <div class="card-title">Client Retention Partnership</div>
+            <div class="card-subtitle">Marketing Agencies</div>
+            <div class="card-description">
+              Stop losing clients after 12 months. Professional onboarding systems that extend retention to 26+ months and prevent $180K revenue loss per client.
+            </div>
+            <div class="card-pricing">
+              <span class="setup-price">$12,000</span>
+              <span class="monthly-price">+ $3,000/month</span>
+            </div>
+            <div class="card-cta">View Partnership Details</div>
+          </a>
 
-        if (e.key === 'ArrowRight' && focusedIndex < cards.length - 1) {
-          cards[focusedIndex + 1].focus();
-        } else if (e.key === 'ArrowLeft' && focusedIndex > 0) {
-          cards[focusedIndex - 1].focus();
-        } else if (e.key === 'Enter' && focusedIndex >= 0) {
-          cards[focusedIndex].click();
-        }
-      });
+          <a href="https://coaches.entelech.net" class="partnership-card coaches">
+            <div class="card-icon"></div>
+            <div class="card-title">Lead Acceleration Partnership</div>
+            <div class="card-subtitle">Business Coaches</div>
+            <div class="card-description">
+              Capture $500K+ in lost lead revenue. Automated nurturing systems that convert 47% more leads while you focus on client delivery.
+            </div>
+            <div class="card-pricing">
+              <span class="setup-price">$9,000</span>
+              <span class="monthly-price">+ $2,400/month</span>
+            </div>
+            <div class="card-cta">View Partnership Details</div>
+          </a>
 
-      // Make cards focusable for keyboard navigation
-      cards.forEach(card => {
-        card.setAttribute('tabindex', '0');
-      });
-    });
-  </script>
+          <a href="https://developers.entelech.net" class="partnership-card developers">
+            <div class="card-icon"></div>
+            <div class="card-title">Proposal Acceleration Partnership</div>
+            <div class="card-subtitle">Software Developers</div>
+            <div class="card-description">
+              Win 35% more $50K+ projects with 2-hour response times. Competitive proposal systems that capture deals through speed and professionalism.
+            </div>
+            <div class="card-pricing">
+              <span class="setup-price">$8,000</span>
+              <span class="monthly-price">+ $2,000/month</span>
+            </div>
+            <div class="card-cta">View Partnership Details</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div>
+            <div class="stat-number">$4.2M</div>
+            <div class="stat-label">Additional Revenue Generated</div>
+          </div>
+          <div>
+            <div class="stat-number">847</div>
+            <div class="stat-label">Partnerships Deployed</div>
+          </div>
+          <div>
+            <div class="stat-number">26+</div>
+            <div class="stat-label">Average Months Client Retention</div>
+          </div>
+          <div>
+            <div class="stat-number">90 Days</div>
+            <div class="stat-label">Revenue Impact Guarantee</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Accelerate Revenue?</h2>
+        <p>
+          Book a discovery call to explore which revenue acceleration partnership fits your business
+        </p>
+        <a href="https://calendly.com/joinentelech/discovery" class="cta-button">
+          Book Discovery Call
+        </a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
