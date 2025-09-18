@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entelech - Business Automation Consulting</title>
-  <meta name="description" content="Custom business automation systems for marketing agencies, business coaches, and software developers. Strategic consulting with measurable results." />
+  <title>Entelech - Growth Operations Consulting for B2B Organizations</title>
+  <meta name="description" content="Strategic growth operations consulting that delivers measurable revenue results for B2B service companies. Custom automation systems for agencies, coaches, and developers." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,13 +33,17 @@
     /* Header */
     .header {
       background: #efefef;
-      padding: 24px 0;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 0;
     }
 
     .logo {
@@ -77,6 +81,26 @@
       color: #1f2937;
     }
 
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      color: #6b7280;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: #1f2937;
+    }
+
     .nav-cta {
       background: #1f2937;
       color: #ffffff;
@@ -98,21 +122,31 @@
       text-align: center;
     }
 
+    .premier-text {
+      font-size: 16px;
+      font-weight: 500;
+      color: #6b7280;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
     .hero-headline {
-      font-size: 48px;
+      font-size: 56px;
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.1;
       margin-bottom: 24px;
       color: #1f2937;
     }
 
     .hero-subhead {
-      font-size: 20px;
+      font-size: 24px;
       color: #6b7280;
       margin-bottom: 48px;
-      max-width: 700px;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
+      font-weight: 500;
     }
 
     /* Services */
@@ -121,7 +155,7 @@
     }
 
     .section-title {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
       color: #1f2937;
       margin-bottom: 16px;
@@ -129,13 +163,14 @@
     }
 
     .section-subtitle {
-      font-size: 18px;
+      font-size: 20px;
       color: #6b7280;
-      margin-bottom: 48px;
+      margin-bottom: 64px;
       text-align: center;
-      max-width: 600px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      font-weight: 500;
     }
 
     .services-grid {
@@ -149,68 +184,75 @@
     .service-card {
       background: rgba(255, 255, 255, 0.8);
       border: 1px solid rgba(31, 41, 55, 0.1);
-      border-radius: 12px;
-      padding: 32px;
+      border-radius: 16px;
+      padding: 40px 32px;
       text-decoration: none;
       color: inherit;
       transition: all 0.3s ease;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .service-card:hover {
       transform: translateY(-4px);
       border-color: rgba(31, 41, 55, 0.2);
       background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 12px 32px rgba(31, 41, 55, 0.1);
+      box-shadow: 0 16px 40px rgba(31, 41, 55, 0.1);
+    }
+
+    .card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .card-title {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
       color: #1f2937;
     }
 
     .card-subtitle {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       color: #6b7280;
       margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
     .card-description {
-      font-size: 14px;
+      font-size: 15px;
       color: #374151;
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 24px;
+      flex: 1;
     }
 
     .card-pricing {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       color: #1f2937;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .card-cta {
-      font-size: 14px;
+      background: #1f2937;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 15px;
       font-weight: 600;
-      color: #1f2937;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s ease;
+      margin-top: auto;
     }
 
-    .card-cta::after {
-      content: '→';
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover .card-cta::after {
-      transform: translateX(4px);
+    .card-cta:hover {
+      background: #111827;
+      transform: translateY(-1px);
     }
 
     /* CTA */
@@ -222,16 +264,16 @@
     }
 
     .cta-section h2 {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
       margin-bottom: 16px;
     }
 
     .cta-section p {
-      font-size: 18px;
+      font-size: 20px;
       color: #d1d5db;
       margin-bottom: 32px;
-      max-width: 500px;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -241,7 +283,7 @@
       color: #1f2937;
       padding: 16px 32px;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       text-decoration: none;
       display: inline-block;
@@ -256,7 +298,11 @@
     /* Responsive */
     @media (max-width: 768px) {
       .hero-headline {
-        font-size: 36px;
+        font-size: 42px;
+      }
+
+      .nav-menu {
+        display: none;
       }
 
       .services-grid {
@@ -279,9 +325,13 @@
           <div class="logo-icon"></div>
           <span class="logo-text">Entelech</span>
         </a>
-        <a href="https://calendly.com/joinentelech/discovery" class="nav-cta">
-          Book Call
-        </a>
+
+        <nav class="nav-menu">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#process" class="nav-link">Process</a>
+          <a href="https://calendly.com/joinentelech/discovery" class="nav-cta">Book Discovery Call</a>
+        </nav>
       </div>
     </div>
   </header>
@@ -290,52 +340,59 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
+        <div class="premier-text">Premier Growth Operations</div>
         <h1 class="hero-headline">
-          Business Automation Consulting
+          Strategic Consulting Firm
         </h1>
         <p class="hero-subhead">
-          Custom systems that deliver measurable results for service businesses — or you don't pay
+          We build custom systems that deliver measurable revenue results for B2B service companies — or you don't pay
         </p>
       </div>
     </section>
 
     <!-- Services -->
-    <section class="services-section">
+    <section class="services-section" id="services">
       <div class="container">
-        <h2 class="section-title">Choose Your Solution</h2>
+        <h2 class="section-title">Specialized by Industry</h2>
         <p class="section-subtitle">
-          Professional automation systems designed for your industry
+          Deep expertise in the unique challenges and opportunities of your specific business model
         </p>
 
         <div class="services-grid">
           <a href="https://sperry-entelech.github.io/entelech-agencies/" class="service-card agencies">
-            <div class="card-title">Marketing Agencies</div>
-            <div class="card-subtitle">Client Retention Systems</div>
-            <div class="card-description">
-              Professional onboarding systems that extend client relationships and reduce churn through organized processes
+            <div class="card-content">
+              <div class="card-title">Marketing Agencies</div>
+              <div class="card-subtitle">Client Retention Partnership</div>
+              <div class="card-description">
+                Stop losing clients after 12 months. Professional onboarding systems that extend retention to 26+ months and prevent $180K revenue loss per client.
+              </div>
+              <div class="card-pricing">$12,000 + $3,000/month</div>
             </div>
-            <div class="card-pricing">$12K + $3K/month</div>
-            <div class="card-cta">View Details</div>
+            <div class="card-cta">View Partnership Details</div>
           </a>
 
           <a href="https://sperry-entelech.github.io/entelech-coaches/" class="service-card coaches">
-            <div class="card-title">Business Coaches</div>
-            <div class="card-subtitle">Lead Nurturing Systems</div>
-            <div class="card-description">
-              Automated follow-up systems that nurture leads consistently while you focus on client delivery
+            <div class="card-content">
+              <div class="card-title">Business Coaches</div>
+              <div class="card-subtitle">Lead Acceleration Partnership</div>
+              <div class="card-description">
+                Capture lost lead revenue. Automated nurturing systems that convert 47% more leads while you focus on client delivery and program development.
+              </div>
+              <div class="card-pricing">$9,000 + $2,400/month</div>
             </div>
-            <div class="card-pricing">$9K + $2.4K/month</div>
-            <div class="card-cta">View Details</div>
+            <div class="card-cta">View Partnership Details</div>
           </a>
 
           <a href="https://sperry-entelech.github.io/entelech-developers/" class="service-card developers">
-            <div class="card-title">Software Developers</div>
-            <div class="card-subtitle">Proposal Speed Systems</div>
-            <div class="card-description">
-              Fast proposal generation systems that help win more projects through competitive response times
+            <div class="card-content">
+              <div class="card-title">Software Developers</div>
+              <div class="card-subtitle">Proposal Acceleration Partnership</div>
+              <div class="card-description">
+                Win 35% more projects with 2-hour response times. Competitive proposal systems that capture deals through speed and professionalism.
+              </div>
+              <div class="card-pricing">$8,000 + $2,000/month</div>
             </div>
-            <div class="card-pricing">$8K + $2K/month</div>
-            <div class="card-cta">View Details</div>
+            <div class="card-cta">View Partnership Details</div>
           </a>
         </div>
       </div>
@@ -344,9 +401,9 @@
     <!-- CTA -->
     <section class="cta-section">
       <div class="container">
-        <h2>Ready to Get Started?</h2>
+        <h2>Ready to Transform Your Business?</h2>
         <p>
-          Book a discovery call to discuss your specific automation needs
+          Book a discovery call to explore which strategic partnership fits your growth objectives
         </p>
         <a href="https://calendly.com/joinentelech/discovery" class="cta-button">
           Book Discovery Call
