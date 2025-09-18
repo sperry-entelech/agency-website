@@ -61,9 +61,14 @@
       position: relative;
     }
 
-    .logo-icon svg {
+    .logo-icon::after {
+      content: '';
       width: 40px;
       height: 40px;
+      background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g stroke="%23000" stroke-width="1" fill="none"><ellipse cx="50" cy="50" rx="45" ry="45"/><ellipse cx="50" cy="50" rx="38" ry="38"/><ellipse cx="50" cy="50" rx="31" ry="31"/><ellipse cx="50" cy="50" rx="24" ry="24"/><ellipse cx="50" cy="50" rx="17" ry="17"/><ellipse cx="50" cy="50" rx="10" ry="10"/><ellipse cx="50" cy="50" rx="3" ry="3"/></g></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .logo-text {
@@ -159,31 +164,6 @@
       box-shadow: 0 12px 32px rgba(31, 41, 55, 0.1);
     }
 
-    .card-icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 20px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .agencies .card-icon {
-      background: #1f2937;
-    }
-
-    .coaches .card-icon {
-      background: #1f2937;
-    }
-
-    .developers .card-icon {
-      background: #1f2937;
-    }
-
     .card-title {
       font-size: 20px;
       font-weight: 600;
@@ -195,7 +175,7 @@
       font-size: 14px;
       font-weight: 500;
       color: #6b7280;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -204,14 +184,14 @@
       font-size: 14px;
       color: #374151;
       line-height: 1.5;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .card-pricing {
       font-size: 16px;
       font-weight: 600;
       color: #1f2937;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .card-cta {
@@ -296,11 +276,7 @@
     <div class="container">
       <div class="header-content">
         <a href="/" class="logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 5c-25 0-45 20-45 45s20 45 45 45 45-20 45-45S75 5 50 5zm0 7c21 0 38 17 38 38s-17 38-38 38-38-17-38-38S29 12 50 12zm0 7c-17 0-31 14-31 31s14 31 31 31 31-14 31-31S67 19 50 19zm0 7c13 0 24 11 24 24s-11 24-24 24-24-11-24-24S37 26 50 26zm0 7c-9 0-17 8-17 17s8 17 17 17 17-8 17-17S59 33 50 33zm0 7c6 0 11 5 11 11s-5 11-11 11-11-5-11-11S44 40 50 40zm0 7c-2 0-4 2-4 4s2 4 4 4 4-2 4-4S52 47 50 47z" fill="#1f2937"/>
-            </svg>
-          </div>
+          <div class="logo-icon"></div>
           <span class="logo-text">Entelech</span>
         </a>
         <a href="https://calendly.com/joinentelech/discovery" class="nav-cta">
@@ -333,7 +309,6 @@
 
         <div class="services-grid">
           <a href="https://sperry-entelech.github.io/entelech-agencies/" class="service-card agencies">
-            <div class="card-icon">A</div>
             <div class="card-title">Marketing Agencies</div>
             <div class="card-subtitle">Client Retention Systems</div>
             <div class="card-description">
@@ -344,7 +319,6 @@
           </a>
 
           <a href="https://sperry-entelech.github.io/entelech-coaches/" class="service-card coaches">
-            <div class="card-icon">C</div>
             <div class="card-title">Business Coaches</div>
             <div class="card-subtitle">Lead Nurturing Systems</div>
             <div class="card-description">
@@ -355,7 +329,6 @@
           </a>
 
           <a href="https://sperry-entelech.github.io/entelech-developers/" class="service-card developers">
-            <div class="card-icon">D</div>
             <div class="card-title">Software Developers</div>
             <div class="card-subtitle">Proposal Speed Systems</div>
             <div class="card-description">
