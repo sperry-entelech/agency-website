@@ -3,12 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entelech - Growth Operations Consulting for B2B Organizations</title>
-  <meta name="description" content="Strategic growth operations consulting that delivers measurable revenue results for B2B service companies. Custom automation systems for agencies, coaches, and developers." />
+  <title>Entelech - Revenue Operations Consulting for B2B Service Businesses</title>
+  <meta name="description" content="Most $500K-$5M B2B service businesses leak $100K-$400K annually through lead follow-up, proposals, or onboarding. Free audit reveals your revenue leak. 48-hour custom systems you own." />
+  <meta name="keywords" content="revenue operations consulting, B2B service business, lead management systems, proposal automation, client onboarding, revenue optimization, custom business systems" />
+  <meta name="author" content="Entelech" />
+  <meta property="og:title" content="Entelech - Revenue Operations Consulting for B2B Service Businesses" />
+  <meta property="og:description" content="You're leaking $100K-$400K annually. Free audit reveals where. 48-hour custom systems you own." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://entelech.com" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     * {
       margin: 0;
@@ -18,7 +27,7 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: #efefef;
+      background: #ffffff;
       color: #1f2937;
       line-height: 1.6;
       min-height: 100vh;
@@ -30,57 +39,97 @@
       padding: 0 24px;
     }
 
-    /* Header */
+    /* Header Section */
     .header {
-      background: #efefef;
+      background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
       z-index: 100;
     }
-
+    
     .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 16px 0;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      color: #1f2937;
+      gap: 12px;
     }
 
     .logo-icon {
       width: 60px;
       height: 60px;
-      background: #efefef;
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.3s ease;
       position: relative;
     }
 
     .logo-icon::after {
-      content: '';
-      width: 40px;
-      height: 40px;
-      background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g stroke="%23000" stroke-width="1" fill="none"><ellipse cx="50" cy="50" rx="45" ry="45"/><ellipse cx="50" cy="50" rx="38" ry="38"/><ellipse cx="50" cy="50" rx="31" ry="31"/><ellipse cx="50" cy="50" rx="24" ry="24"/><ellipse cx="50" cy="50" rx="17" ry="17"/><ellipse cx="50" cy="50" rx="10" ry="10"/><ellipse cx="50" cy="50" rx="3" ry="3"/></g></svg>');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      content: 'E';
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+    }
+    
+    .logo-icon:hover {
+      transform: translateY(-3px) scale(1.05);
     }
 
     .logo-text {
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 800;
       color: #1f2937;
+      letter-spacing: -0.5px;
+      transition: all 0.3s ease;
+    }
+    
+    .logo:hover .logo-text {
+      color: #111827;
+      transform: translateY(-2px);
     }
 
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      z-index: 101;
+    }
+
+    .mobile-menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background: #1f2937;
+      margin: 3px 0;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Navigation Menu */
     .nav-menu {
       display: flex;
       align-items: center;
@@ -101,14 +150,27 @@
       color: #1f2937;
     }
 
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1f2937;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
     .nav-cta {
       background: #1f2937;
-      color: #ffffff;
-      padding: 12px 24px;
-      border-radius: 8px;
+      color: #ffffff !important;
+      padding: 8px 20px;
+      border-radius: 6px;
       font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
     }
 
     .nav-cta:hover {
@@ -116,330 +178,584 @@
       transform: translateY(-1px);
     }
 
-    /* Hero */
-    .hero {
-      padding: 80px 0;
-      text-align: center;
+    .nav-cta::after {
+      display: none;
     }
 
-    .premier-text {
-      font-size: 16px;
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 64px 0;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 64px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #f3f4f6;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 8px 16px;
+      margin-bottom: 24px;
+    }
+
+    .badge-text {
+      color: #6b7280;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .attention-line {
+      font-size: 18px;
       font-weight: 500;
       color: #6b7280;
       margin-bottom: 16px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
     }
 
-    .hero-headline {
-      font-size: 56px;
+    .main-headline {
+      font-size: 48px;
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.2;
       margin-bottom: 24px;
+      color: #111827;
+    }
+
+    .highlight-text {
       color: #1f2937;
     }
 
-    .hero-subhead {
-      font-size: 24px;
+    .sub-headline {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      color: #374151;
+    }
+
+    .sub-text {
+      font-size: 18px;
       color: #6b7280;
-      margin-bottom: 48px;
+      font-weight: 400;
+      margin-bottom: 32px;
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
-      font-weight: 500;
-    }
-
-    /* Services */
-    .services-section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      font-size: 36px;
-      font-weight: 700;
-      color: #1f2937;
-      margin-bottom: 16px;
-      text-align: center;
     }
 
     .section-subtitle {
       font-size: 20px;
       color: #6b7280;
-      margin-bottom: 64px;
-      text-align: center;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      font-weight: 500;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .service-card {
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(31, 41, 55, 0.1);
-      border-radius: 16px;
-      padding: 40px 32px;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(31, 41, 55, 0.2);
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 16px 40px rgba(31, 41, 55, 0.1);
-    }
-
-    .card-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-title {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #1f2937;
-    }
-
-    .card-subtitle {
-      font-size: 16px;
-      font-weight: 500;
-      color: #6b7280;
-      margin-bottom: 20px;
-    }
-
-    .card-description {
-      font-size: 15px;
-      color: #374151;
-      line-height: 1.6;
-      margin-bottom: 24px;
-      flex: 1;
-    }
-
-    .card-pricing {
-      margin-bottom: 20px;
-    }
-
-    .pricing-main {
-      font-size: 18px;
-      font-weight: 600;
-      color: #1f2937;
-      margin-bottom: 8px;
-    }
-
-    .pricing-breakdown {
-      font-size: 14px;
-      color: #6b7280;
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-
-    .pricing-fine-print {
-      font-size: 12px;
-      color: #9ca3af;
-      font-style: italic;
-      line-height: 1.3;
-    }
-
-    .card-cta {
-      background: #1f2937;
-      color: #ffffff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 15px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.2s ease;
-      margin-top: auto;
-    }
-
-    .card-cta:hover {
-      background: #111827;
-      transform: translateY(-1px);
-    }
-
-    /* CTA */
-    .cta-section {
-      padding: 80px 0;
-      background: #1f2937;
-      color: #ffffff;
-      text-align: center;
-    }
-
-    .cta-section h2 {
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .cta-section p {
-      font-size: 20px;
-      color: #d1d5db;
       margin-bottom: 32px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      font-weight: 500;
+    }
+
+    /* CTA Button */
+    .cta-container {
+      display: inline-block;
+      margin: 32px 0;
+      position: relative;
+    }
+
+    .cta-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, rgba(31, 41, 55, 0.2) 0%, transparent 70%);
+      border-radius: 6px;
+      filter: blur(12px);
+      z-index: -1;
     }
 
     .cta-button {
-      background: #ffffff;
-      color: #1f2937;
+      background: #1f2937;
+      color: white;
+      border: 1px solid #1f2937;
       padding: 16px 32px;
-      border-radius: 8px;
-      font-size: 18px;
+      border-radius: 6px;
+      font-size: 16px;
       font-weight: 600;
       text-decoration: none;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       transition: all 0.2s ease;
+      gap: 8px;
     }
 
     .cta-button:hover {
-      background: #f3f4f6;
+      background: #111827;
       transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 41, 55, 0.2);
     }
 
-    /* Responsive */
+    /* Trust Signals */
+    .trust-signals {
+      margin: 64px 0;
+      text-align: center;
+    }
+
+    .trust-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 32px;
+    }
+
+    .trust-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: #f9fafb;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .trust-icon {
+      width: 20px;
+      height: 20px;
+      color: #10b981;
+      flex-shrink: 0;
+    }
+
+    .trust-item span {
+      font-weight: 500;
+      color: #374151;
+    }
+
+    /* Problem Section */
+    .problem-section {
+      margin: 64px 0;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .about-text {
+      text-align: left;
+      margin: 32px auto;
+      max-width: 800px;
+    }
+
+    .about-text p {
+      color: #6b7280;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      margin: 48px 0;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      border-color: #d1d5db;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .service-card ul {
+      color: #6b7280;
+      line-height: 1.8;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .service-card ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Niche Navigation Hover Effects */
+    .niche-card:hover {
+      border-color: #1f2937 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 41, 55, 0.15);
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-      .hero-headline {
-        font-size: 42px;
+      .mobile-menu-toggle {
+        display: flex;
       }
 
       .nav-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-top: 1px solid #e5e7eb;
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .main-headline {
+        font-size: 36px;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .trust-items {
+        grid-template-columns: 1fr;
       }
 
       .services-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
-
-      .container {
-        padding: 0 16px;
-      }
     }
   </style>
 </head>
 
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="header-content">
-        <a href="/" class="logo">
-          <div class="logo-icon"></div>
+        <!-- Logo and Brand -->
+        <div class="logo">
+          <div class="logo-icon" alt="Entelech Logo"></div>
           <span class="logo-text">Entelech</span>
-        </a>
-
-        <nav class="nav-menu">
-          <a href="#services" class="nav-link">Services</a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+          <a href="/agencies" class="nav-link">For Agencies</a>
+          <a href="/coaches" class="nav-link">For Coaches</a>
+          <a href="/developers" class="nav-link">For Developers</a>
           <a href="#about" class="nav-link">About</a>
-          <a href="#process" class="nav-link">Process</a>
-          <a href="https://calendly.com/joinentelech/discovery" class="nav-cta">Book Discovery Call</a>
+          <a href="https://calendly.com/joinentelech/discovery-call" class="nav-link nav-cta">Book Discovery Call</a>
         </nav>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <div class="premier-text">Premier Growth Operations</div>
-        <h1 class="hero-headline">
-          Strategic Consulting Firm
-        </h1>
-        <p class="hero-subhead">
-          We build custom systems that deliver measurable revenue results for B2B service companies — or you don't pay
+      <h1 class="main-headline">
+        <span class="highlight-text">Revenue Operations Consulting</span><br>
+        for B2B Service Businesses
+      </h1>
+
+      <p class="section-subtitle" style="font-size: 22px; color: #1f2937; margin-bottom: 32px; font-weight: 600;">
+        You're leaking $100K-$400K annually. I'll find it, fix it, and guarantee results.
+      </p>
+
+      <!-- Niche Navigation -->
+      <div style="margin: 40px 0; background: #f8fafc; border-radius: 12px; padding: 32px; border: 1px solid #e2e8f0;">
+        <h3 style="font-size: 24px; font-weight: 600; color: #1f2937; margin-bottom: 24px; text-align: center;">Choose Your Industry:</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 24px;">
+          <a href="/agencies" class="niche-card" style="display: block; background: #ffffff; border: 2px solid #e5e7eb; border-radius: 8px; padding: 20px; text-decoration: none; transition: all 0.3s ease; text-align: center;">
+            <div style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">For Marketing Agencies</div>
+            <div style="font-size: 14px; color: #6b7280;">Client Onboarding Automation</div>
+          </a>
+          <a href="/coaches" class="niche-card" style="display: block; background: #ffffff; border: 2px solid #e5e7eb; border-radius: 8px; padding: 20px; text-decoration: none; transition: all 0.3s ease; text-align: center;">
+            <div style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">For Coaches & Consultants</div>
+            <div style="font-size: 14px; color: #6b7280;">Lead Nurturing & Follow-Up</div>
+          </a>
+          <a href="/developers" class="niche-card" style="display: block; background: #ffffff; border: 2px solid #e5e7eb; border-radius: 8px; padding: 20px; text-decoration: none; transition: all 0.3s ease; text-align: center;">
+            <div style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 8px;">For Software Developers</div>
+            <div style="font-size: 14px; color: #6b7280;">Proposal Generation Systems</div>
+          </a>
+        </div>
+      </div>
+
+      <p class="sub-text" style="font-size: 18px; line-height: 1.8; max-width: 800px; margin: 24px auto;">
+        If you're running a $500K-$5M B2B service business, there's a 90% chance you're hemorrhaging six figures through one of three systems: lead follow-up, proposal generation, or client onboarding.
+      </p>
+
+      <p class="sub-text" style="font-size: 18px; line-height: 1.8; max-width: 800px; margin: 24px auto;">
+        The problem? You can't diagnose which one because you're inside the operation.
+      </p>
+
+      <div style="background: #f0f9ff; border: 1px solid #0ea5e9; border-radius: 12px; padding: 32px; margin: 32px auto; max-width: 700px;">
+        <p style="color: #0c4a6e; font-weight: 600; margin: 0 0 16px 0; font-size: 18px; text-align: center;">
+          I'll audit your revenue operations for free and show you exactly where the leak is.
+        </p>
+        <p style="color: #475569; font-weight: 400; margin: 0; font-size: 16px; line-height: 1.7; text-align: center;">
+          If the findings make sense, I'll share relevant demos from my project library and we'll hop on a quick <strong>15-minute call</strong> to discuss your options:
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+          <div style="background: white; padding: 16px; border-radius: 8px;">
+            <strong style="color: #1e40af;">Consulting:</strong>
+            <p style="margin: 8px 0 0 0; font-size: 14px; color: #64748b;">I guide you through implementation while you build it yourself</p>
+          </div>
+          <div style="background: white; padding: 16px; border-radius: 8px;">
+            <strong style="color: #1e40af;">Done-For-You:</strong>
+            <p style="margin: 8px 0 0 0; font-size: 14px; color: #64748b;">I build custom systems and transfer complete ownership to you</p>
+          </div>
+        </div>
+        <p style="color: #475569; font-weight: 500; margin: 20px 0 0 0; font-size: 15px; text-align: center;">
+          No pressure. No subscriptions. You own everything either way.
         </p>
       </div>
+      
+      <!-- Enhanced CTA Button -->
+      <div class="cta-container">
+        <div class="cta-glow"></div>
+        <a href="https://calendly.com/joinentelech/discovery-call" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Get free revenue operations audit">
+          GET FREE AUDIT
+        </a>
+      </div>
+      <p style="text-align: center; color: #6b7280; font-size: 14px; margin-top: 16px;">
+        15-minute call • No obligation • See working demos from our project library
+      </p>
     </section>
 
-    <!-- Services -->
-    <section class="services-section" id="services">
+    <!-- Trust Signals -->
+    <section class="trust-signals" role="complementary" aria-label="Trust and credibility indicators">
       <div class="container">
-        <h2 class="section-title">Specialized by Industry</h2>
-        <p class="section-subtitle">
-          Deep expertise in the unique challenges and opportunities of your specific business model
-        </p>
-
-        <div class="services-grid">
-          <a href="https://sperry-entelech.github.io/entelech-agencies/" class="service-card agencies">
-            <div class="card-content">
-              <div class="card-title">Marketing Agencies</div>
-              <div class="card-subtitle">Client Retention System</div>
-              <div class="card-description">
-                Stop losing clients after 12 months. Professional onboarding systems that extend retention to 26+ months and prevent $180K revenue loss per client.
-              </div>
-              <div class="card-pricing">
-                <div class="pricing-main">$12,000 setup + $3,000/month</div>
-                <div class="pricing-breakdown">Setup fee covers system design & implementation<br/>Monthly retainer for optimization & support</div>
-                <div class="pricing-fine-print">Additional revenue share based on results generated</div>
-              </div>
-            </div>
-            <div class="card-cta">View Partnership Details</div>
-          </a>
-
-          <a href="https://sperry-entelech.github.io/entelech-coaches/" class="service-card coaches">
-            <div class="card-content">
-              <div class="card-title">Business Coaches</div>
-              <div class="card-subtitle">Lead Conversion System</div>
-              <div class="card-description">
-                Capture lost lead revenue. Automated nurturing systems that convert 47% more leads while you focus on client delivery and program development.
-              </div>
-              <div class="card-pricing">
-                <div class="pricing-main">$9,000 setup + $2,400/month</div>
-                <div class="pricing-breakdown">Setup fee covers system design & implementation<br/>Monthly retainer for optimization & support</div>
-                <div class="pricing-fine-print">Additional revenue share based on results generated</div>
-              </div>
-            </div>
-            <div class="card-cta">View Partnership Details</div>
-          </a>
-
-          <a href="https://sperry-entelech.github.io/entelech-developers/" class="service-card developers">
-            <div class="card-content">
-              <div class="card-title">Software Developers</div>
-              <div class="card-subtitle">Competitive Response System</div>
-              <div class="card-description">
-                Win 35% more projects with competitive response times. Competitive proposal systems that capture deals through speed and professionalism.
-              </div>
-              <div class="card-pricing">
-                <div class="pricing-main">$8,000 setup + $2,000/month</div>
-                <div class="pricing-breakdown">Setup fee covers system design & implementation<br/>Monthly retainer for optimization & support</div>
-                <div class="pricing-fine-print">Additional revenue share based on results generated</div>
-              </div>
-            </div>
-            <div class="card-cta">View Partnership Details</div>
-          </a>
+        <h2 class="trust-title">Measurable Outcomes We Deliver</h2>
+        <div class="trust-items">
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            <span>25-35% Higher Lead Conversion</span>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.53 10.5a.75.75 0 00-1.06 1.061l1.5 1.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+            </svg>
+            <span>$300-800/Month Platform Savings</span>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm3.707 6.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+            </svg>
+            <span>15-25 Hours/Week Time Savings</span>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M1 6a3 3 0 013-3h12a3 3 0 013 3v8a3 3 0 01-3 3H4a3 3 0 01-3-3V6zm4 2a1 1 0 000 2h10a1 1 0 100-2H5z" clip-rule="evenodd" />
+            </svg>
+            <span>30-50% Faster Sales Cycles</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-      <div class="container">
-        <h2>Ready to Transform Your Business?</h2>
-        <p>
-          Book a discovery call to explore which strategic partnership fits your growth objectives
-        </p>
-        <a href="https://calendly.com/joinentelech/discovery" class="cta-button">
-          Book Discovery Call
+    <!-- Services Section -->
+    <section class="problem-section">
+      <h2 class="section-title">Three Systems Bleeding Your Revenue</h2>
+      <p class="section-subtitle">Most $500K-$5M B2B service businesses leak six figures annually through one of these systems. Which one is yours?</p>
+
+      <!-- Ownership-Focused Value Proposition -->
+      <div class="ownership-section" style="background: #f9fafb; border-radius: 16px; padding: 48px; margin: 48px 0; border: 1px solid #e5e7eb;">
+        <h3 style="font-size: 28px; font-weight: 700; color: #111827; margin-bottom: 24px; text-align: center;">Complete Ownership From Day One</h3>
+        <p style="font-size: 18px; color: #6b7280; text-align: center; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">No vendor lock-in. No hostage situations. Your infrastructure, your data, your success.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 32px;">
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+              <svg style="width: 30px; height: 30px; color: white;" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h4 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 12px;">Own Your Systems</h4>
+            <p style="color: #6b7280; line-height: 1.6;">Full source code ownership, hosted on your infrastructure. No proprietary dependencies or platform rental fees.</p>
+          </div>
+          
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+              <svg style="width: 30px; height: 30px; color: white;" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+              </svg>
+            </div>
+            <h4 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 12px;">Strategic Partnership</h4>
+            <p style="color: #6b7280; line-height: 1.6;">We analyze your business first, design custom solutions, then transfer complete ownership. Consulting-led, not vendor-dependent.</p>
+          </div>
+          
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #8b5cf6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+              <svg style="width: 30px; height: 30px; color: white;" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <h4 style="font-size: 20px; font-weight: 600; color: #111827; margin-bottom: 12px;">Transparent Costs</h4>
+            <p style="color: #6b7280; line-height: 1.6;">Optional maintenance only covers actual hosting and updates ($200-350/month). No system access fees or proprietary licensing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three Revenue Leaks -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; margin: 48px 0;">
+
+        <!-- Lead → Opportunity Systems -->
+        <div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 12px; padding: 32px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#1f2937'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e7eb'; this.style.transform='translateY(0)'">
+          <h3 style="font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 16px;">Lead → Opportunity Systems</h3>
+          <p style="color: #ef4444; font-weight: 600; font-size: 18px; margin-bottom: 16px;">$3,000 + $900/month</p>
+
+          <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; margin-bottom: 16px; border-radius: 4px;">
+            <p style="color: #991b1b; font-weight: 600; margin: 0;">You have this problem if:</p>
+            <p style="color: #7f1d1d; margin: 8px 0 0 0; font-size: 15px;">You're getting 50-150 qualified leads monthly but only following up with 30-40%</p>
+          </div>
+
+          <p style="color: #6b7280; margin-bottom: 16px; line-height: 1.7;"><strong>What we build:</strong> Automated follow-up sequences that contact 95%+ of leads within 2 hours, with intelligent persistence until response or disqualification</p>
+
+          <p style="color: #10b981; font-weight: 600; margin: 0;"><strong>Typical impact:</strong> 25-40% increase in opportunities booked</p>
+        </div>
+
+        <!-- Opportunity → Deal Systems -->
+        <div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 12px; padding: 32px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#1f2937'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e7eb'; this.style.transform='translateY(0)'">
+          <h3 style="font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 16px;">Opportunity → Deal Systems</h3>
+          <p style="color: #ef4444; font-weight: 600; font-size: 18px; margin-bottom: 16px;">$2,500 + $750/month</p>
+
+          <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; margin-bottom: 16px; border-radius: 4px;">
+            <p style="color: #991b1b; font-weight: 600; margin: 0;">You have this problem if:</p>
+            <p style="color: #7f1d1d; margin: 8px 0 0 0; font-size: 15px;">Proposals take 6-10 hours to create and your close rate is stuck at 18-25%</p>
+          </div>
+
+          <p style="color: #6b7280; margin-bottom: 16px; line-height: 1.7;"><strong>What we build:</strong> Dynamic proposal generation using past wins, automated pricing logic, and custom templates that adapt to prospect data</p>
+
+          <p style="color: #10b981; font-weight: 600; margin: 0;"><strong>Typical impact:</strong> 70% reduction in proposal time, 8-12 point improvement in close rates</p>
+        </div>
+
+        <!-- New Client → Partner Systems -->
+        <div style="background: #ffffff; border: 2px solid #e5e7eb; border-radius: 12px; padding: 32px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#1f2937'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e7eb'; this.style.transform='translateY(0)'">
+          <h3 style="font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 16px;">New Client → Partner Systems</h3>
+          <p style="color: #ef4444; font-weight: 600; font-size: 18px; margin-bottom: 16px;">$4,000 + $1,200/month</p>
+
+          <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; margin-bottom: 16px; border-radius: 4px;">
+            <p style="color: #991b1b; font-weight: 600; margin: 0;">You have this problem if:</p>
+            <p style="color: #7f1d1d; margin: 8px 0 0 0; font-size: 15px;">Onboarding takes 3-6 weeks and 20-30% of clients churn within 12 months</p>
+          </div>
+
+          <p style="color: #6b7280; margin-bottom: 16px; line-height: 1.7;"><strong>What we build:</strong> Automated onboarding workflows with milestone tracking, proactive check-ins, and early warning systems for at-risk accounts</p>
+
+          <p style="color: #10b981; font-weight: 600; margin: 0;"><strong>Typical impact:</strong> 50% faster onboarding, 40% reduction in first-year churn</p>
+        </div>
+      </div>
+
+      <p style="text-align: center; color: #6b7280; font-size: 16px; margin: 32px 0; font-style: italic;">
+        All systems: 48-hour build, you own everything
+      </p>
+
+      <div class="cta-container" style="margin: 48px 0;">
+        <a href="https://calendly.com/joinentelech/discovery-call" target="_blank" rel="noopener noreferrer" class="cta-button" style="font-size: 18px; padding: 16px 32px;">
+          GET FREE AUDIT
         </a>
       </div>
+      <p style="text-align: center; color: #6b7280; font-size: 14px; margin-top: 16px;">
+        15-minute call • No obligation • See working demos from our project library
+      </p>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="problem-section" id="testimonials">
+      <h2 class="section-title">Case Study: Transportation Company Transformation</h2>
+      <div class="problem-grid" style="margin-top: 48px;">
+        <div class="problem-card" style="padding: 32px; text-align: left; background: #f9fafb; border-radius: 12px; border: 1px solid #e5e7eb;">
+          <p class="problem-description" style="font-style: italic; margin-bottom: 20px; font-size: 18px; color: #6b7280;">"Entelech streamlined our entire booking and dispatch system. We went from manual coordination to automated workflows that scale with our growth. Game changer for our operations."</p>
+          <p style="color: #1f2937; font-weight: 600;">- TNT Limousine Services</p>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div style="margin: 64px 0; background: #ffffff; border-radius: 16px; padding: 48px; border: 1px solid #e5e7eb;">
+        <h3 style="font-size: 28px; font-weight: 700; color: #111827; margin-bottom: 32px; text-align: center;">Investment in Your Business, Not Rental of Our Systems</h3>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+          <div style="margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #e5e7eb;">
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827; margin-bottom: 12px;">Do you charge monthly system access fees?</h4>
+            <p style="color: #6b7280; line-height: 1.7;">No. Unlike other agencies that charge $750-1,750/month for system access, we transfer complete ownership to you. Optional maintenance ($200-350/month) only covers actual hosting costs and technical updates - not proprietary system rental.</p>
+          </div>
+          
+          <div style="margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #e5e7eb;">
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827; margin-bottom: 12px;">What happens if we stop working together?</h4>
+            <p style="color: #6b7280; line-height: 1.7;">You keep everything. Full source code, hosting infrastructure, and system access. No vendor lock-in or hostage situations. Your investment in custom systems remains an asset to your business permanently.</p>
+          </div>
+          
+          <div style="margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #e5e7eb;">
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827; margin-bottom: 12px;">How is this different from other automation agencies?</h4>
+            <p style="color: #6b7280; line-height: 1.7;">Most agencies create dependency through proprietary platforms and monthly licensing fees. We're strategic consultants who analyze your business first, design custom solutions, then transfer complete ownership. Enterprise capabilities without enterprise dependency.</p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 18px; font-weight: 600; color: #111827; margin-bottom: 12px;">What's included in the optional maintenance?</h4>
+            <p style="color: #6b7280; line-height: 1.7;">Only actual operational costs: server hosting, security updates, backup management, and technical support. No system access fees, no per-user licensing, no proprietary platform charges. Complete cost transparency.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-container">
+        <a href="https://calendly.com/joinentelech/discovery-call" target="_blank" rel="noopener noreferrer" class="cta-button">
+          GET FREE AUDIT
+        </a>
+      </div>
+      <p style="text-align: center; color: #6b7280; font-size: 14px; margin-top: 16px;">
+        15-minute call • No obligation • See working demos from our project library
+      </p>
     </section>
   </main>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenuToggle.classList.toggle('active');
+          navMenu.classList.toggle('active');
+          
+          const isExpanded = navMenu.classList.contains('active');
+          mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
